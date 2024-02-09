@@ -50,23 +50,27 @@ import { Image } from "astro:assets";
                 <p class="description">{description}</p>
 
                 <span class="project-links">
-                  <a href={github} target="_blank">
-                    <figure>
-                      <Github />
-                    </figure>
-                    GitHub
-                  </a>
-                  <a href={url} target="_blank">
-                    <figure>
-                      <Image
-                        width={20}
-                        height={20}
-                        src="https://res.cloudinary.com/juanjportfolio/image/upload/v1707441855/Assets/link-simple-horizontal_eoosre.svg"
-                        alt="Link"
-                      />
-                    </figure>
-                    Visitar
-                  </a>
+                  {github && (
+                    <a href={github} target="_blank">
+                      <figure>
+                        <Github />
+                      </figure>
+                      Repositorio
+                    </a>
+                  )}
+                  {url && (
+                    <a href={url} target="_blank">
+                      <figure>
+                        <Image
+                          width={20}
+                          height={20}
+                          src="https://res.cloudinary.com/juanjportfolio/image/upload/v1707441855/Assets/link-simple-horizontal_eoosre.svg"
+                          alt="Link"
+                        />
+                      </figure>
+                      Visitar
+                    </a>
+                  )}
                 </span>
               </div>
             </section>
