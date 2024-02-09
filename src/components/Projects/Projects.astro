@@ -1,0 +1,147 @@
+---
+import Code from "@/icons/Code.astro";
+import Github from "@/icons/Github.astro";
+import Link from "@/icons/Link.astro";
+import { projects } from "@cv";
+import { Image } from "astro:assets";
+---
+
+<div id="proyectos" class="projects-container">
+  <h1>
+    <Code />
+    Proyectos
+  </h1>
+
+  <div class="project-card-container">
+    {
+      projects.map(
+        ({ name, description, image, url, isActive, technologies, github }) => (
+          <section class="project-card">
+            <figure class="project-image">
+              <img src={image} alt={name} />
+            </figure>
+            <section class="project-info">
+              <span class="flex flex-row items-center justify-between">
+                <h1 class="!font-medium !mb-0">{name}</h1>
+
+                {isActive ? <p>Activo</p> : <p>Inactivo</p>}
+              </span>
+
+              <div>
+                <ul>
+                  {technologies.map((t: any) => {
+                    const { name, logo, color } = t;
+
+                    return (
+                      <li
+                        style={{
+                          backgroundColor: `rgba(${color},0.3)`,
+                          borderWidth: "1px",
+                          borderColor: `rgb(${color})`,
+                        }}
+                      >
+                        <img src={logo} alt={name} />
+                        <p>{name}</p>
+                      </li>
+                    );
+                  })}
+                </ul>
+
+                <p class="description">{description}</p>
+
+                <span class="project-links">
+                  <a href={github} target="_blank">
+                    <figure>
+                      <Github />
+                    </figure>
+                    GitHub
+                  </a>
+                  <a href={url} target="_blank">
+                    <figure>
+                      <Image
+                        width={20}
+                        height={20}
+                        src="https://res.cloudinary.com/juanjportfolio/image/upload/v1707441855/Assets/link-simple-horizontal_eoosre.svg"
+                        alt="Link"
+                      />
+                    </figure>
+                    Visitar
+                  </a>
+                </span>
+              </div>
+            </section>
+          </section>
+        )
+      )
+    }
+  </div>
+</div>
+
+<style>
+  h1 {
+    @apply text-3xl font-bold mb-10 flex flex-row gap-3 items-center;
+  }
+  .projects-container {
+    @apply w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+
+    .project-card-container {
+      @apply flex flex-col items-center gap-20 mb-4;
+
+      .project-card {
+        @apply flex flex-row items-center gap-6 h-56 w-full;
+
+        .project-image {
+          @apply w-[450px] rounded-lg border-2 border-slate-700 overflow-hidden h-full;
+
+          & img {
+            @apply w-full h-full object-cover rounded-lg scale-105 duration-300;
+          }
+        }
+
+        .project-info {
+          @apply w-2/4 flex flex-col gap-3 h-full;
+
+          & div {
+            @apply flex flex-col justify-between h-full;
+          }
+
+          & ul {
+            @apply flex flex-wrap flex-row gap-2;
+
+            & li {
+              @apply flex flex-row items-center justify-center gap-2 px-3 py-[2px] rounded-full;
+              & p {
+                @apply text-xs;
+              }
+              & img {
+                @apply w-4 h-4;
+              }
+            }
+          }
+
+          .description {
+            @apply text-slate-400;
+          }
+
+          .project-links {
+            @apply flex flex-row gap-6;
+
+            & a {
+              @apply flex flex-row items-center gap-2;
+
+              & figure {
+                @apply w-6 h-6 flex items-center justify-center;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          & figure img {
+            @apply scale-100;
+          }
+        }
+      }
+    }
+  }
+</style>

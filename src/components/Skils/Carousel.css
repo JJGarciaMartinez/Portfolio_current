@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slider-container {
+  .box-container {
+    @apply !w-auto;
+    .skill-box {
+      @apply p-2;
+
+      & div {
+        @apply !flex !flex-row !items-center !gap-2 !justify-center py-[2px] px-0 rounded-full !bg-opacity-50;
+
+        & figure {
+          @apply w-5 h-5;
+
+          & img {
+            @apply w-full h-full object-contain;
+          }
+        }
+
+        & h1 {
+          @apply text-white;
+        }
+      }
+    }
+  }
+}
+
+.slick-slider.slick-initialized {
+  @apply relative py-2;
+  &::after {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full;
+    background: rgb(4, 10, 17);
+    background: linear-gradient(
+      90deg,
+      rgba(4, 10, 17, 1) 0%,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0) 75%,
+      rgba(4, 10, 17, 1) 100%
+    );
+  }
+}

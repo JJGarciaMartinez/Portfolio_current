@@ -1,0 +1,110 @@
+---
+import { basics } from "@cv";
+import { Image } from "astro:assets";
+import SocialPills from "./SocialPills.astro";
+
+const { image: profilePic, name, avaliable: status, label } = basics;
+
+const linkedIn = "https://www.linkedin.com/in/juanjgarcia23/";
+---
+
+<section id="header">
+  <div class="max-w-xl">
+    <span class="profile-header">
+      <figure>
+        <Image
+          src={profilePic}
+          alt={`Profile picture of ${name}`}
+          width={100}
+          height={100}
+        />
+        <span
+          class=`profile-status-dot ${status ? "active" : "disabled"}`
+          id={status ? "status" : "no-status"}></span>
+      </figure>
+      <a href={linkedIn} target="_blank">
+        <div class=`profile-status ${status ? "active" : "disabled"}`>
+          {status ? "Disponible para trabajar" : "Trabajando actualmente"}
+        </div>
+      </a>
+    </span>
+
+    <span class="profile-info">
+      <h1>Hola, Soy {name}</h1>
+      <p>{label}</p>
+    </span>
+
+    <SocialPills />
+  </div>
+</section>
+
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+
+  tippy("#status", {
+    content: "Disponible",
+    placement: "bottom",
+  });
+
+  tippy("#no-status", {
+    content: "No disponible",
+    placement: "bottom",
+  });
+</script>
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  section {
+    @apply py-16 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+
+    .profile-header {
+      @apply flex flex-row items-center gap-5 mb-4;
+
+      & figure {
+        @apply w-16 h-16 rounded-full relative;
+
+        & img {
+          @apply w-full h-full rounded-full object-cover;
+        }
+
+        .profile-status-dot {
+          @apply w-3 h-3 rounded-full absolute bottom-1 right-1 cursor-help;
+
+          &.active {
+            @apply bg-[rgb(17,143,0)];
+          }
+
+          &.disabled {
+            @apply bg-[rgb(145,2,2)];
+          }
+        }
+      }
+
+      .profile-status {
+        @apply rounded-full text-neutral-50 px-3 py-1 text-sm border;
+
+        &.active {
+          @apply border-[rgba(30,195,8,0.7)] bg-[rgba(17,143,0,0.1)];
+        }
+
+        &.disabled {
+          @apply border-[rgba(195,8,8,0.7)] bg-[rgba(145,2,2,0.2)];
+        }
+      }
+    }
+
+    .profile-info {
+      & h1 {
+        @apply text-5xl font-bold;
+      }
+
+      & p {
+        @apply text-xl mt-6;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+import XTwitter from "@/icons/XTwitter.astro";
+import Github from "@/icons/Github.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import Send from "@/icons/Send.astro";
+import Envelope from "@/icons/Envelope.astro";
+import { basics } from "@cv";
+const { profiles: navItems, email } = basics;
+---
+
+<nav class="social-nav">
+  <ul>
+    {
+      navItems.map((item) => (
+        <li>
+          {item.network === "X" ? (
+            <a href={item.url} target="_blank">
+              <XTwitter />
+              <p>{item.username}</p>
+            </a>
+          ) : item.network === "GitHub" ? (
+            <a href={item.url} target="_blank">
+              <Github />
+              <p>{item.username}</p>
+            </a>
+          ) : (
+            <a href={item.url} target="_blank">
+              <LinkedIn />
+              <p>{item.username}</p>
+            </a>
+          )}
+        </li>
+      ))
+    }
+
+    <li>
+      <a href=`mailto:${email}`>
+        <Envelope /> Contactame
+      </a>
+    </li>
+  </ul>
+
+  <style>
+    .social-nav {
+      @apply mt-10;
+      & ul {
+        @apply flex flex-row flex-wrap items-center gap-x-5 gap-y-3;
+
+        & li a {
+          @apply flex flex-row items-center gap-2 bg-[rgba(12,31,52)] py-1 px-4 rounded-full text-sm border-[1px] border-slate-700 duration-200;
+
+          &:hover {
+            @apply bg-slate-700;
+          }
+        }
+      }
+    }
+  </style>
+</nav>

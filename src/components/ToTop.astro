@@ -1,0 +1,42 @@
+---
+import CaretTop from "@/icons/Caret-Top.astro";
+---
+
+<div>
+  <figure class="to-top" :class="{'show':show}">
+    <CaretTop />
+  </figure>
+</div>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".to-top");
+    if (!navbar) return;
+    if (window.scrollY > 100) {
+      navbar.classList.add("show");
+    } else {
+      navbar.classList.remove("show");
+    }
+  });
+
+  const toTop = document.querySelector(".to-top");
+
+  if (toTop) {
+    toTop.addEventListener("click", () => {
+      window.scrollTo(0, 0);
+    });
+  }
+</script>
+
+<style>
+  div {
+    @apply fixed bottom-10 right-10;
+  }
+
+  .to-top {
+    @apply opacity-0 translate-y-[100px] cursor-pointer duration-500;
+  }
+  .show {
+    @apply opacity-100 translate-y-0;
+  }
+</style>

@@ -1,0 +1,95 @@
+---
+import Moon from "@/icons/Moon.astro";
+
+const navItems: { title: string; label: string; url: string }[] = [
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "/#contacto",
+  },
+];
+---
+
+<nav class="navbar-scroll" :class="{'scrolled': scrolled}">
+  <ul>
+    {
+      navItems.map((item) => (
+        <li>
+          <a href={item.url} aria-label={item.label}>
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
+    <div class="theme-switch" id="change-theme">
+      <Moon />
+    </div>
+  </ul>
+</nav>
+
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+
+  tippy("#change-theme", {
+    content: "Cambiar tema",
+  });
+
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar-scroll");
+    if (navbar) {
+      if (window.scrollY > 0) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    }
+  });
+</script>
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  nav {
+    @apply w-full p-6 fixed flex justify-center z-50 duration-300;
+
+    & ul {
+      @apply flex flex-row gap-8 w-auto duration-300 ease-in-out  py-3 px-6 rounded-full border-[2px] border-transparent;
+
+      & li {
+        @apply cursor-pointer flex items-center;
+
+        & a {
+          @apply text-sm;
+        }
+      }
+
+      .theme-switch {
+        @apply cursor-pointer text-sm flex items-center;
+      }
+    }
+  }
+
+  .navbar-scroll.scrolled {
+    @apply p-2;
+    & ul {
+      @apply bg-[rgba(4,10,17,0.5)] border-[1px] border-[rgba(255,255,255,0.2)] backdrop-blur;
+    }
+  }
+</style>

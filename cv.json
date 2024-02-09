@@ -1,0 +1,344 @@
+{
+  "basics": {
+    "name": "Juan J. García",
+    "label": "Egresado del bootcamp de SoyHenry y Desarrollador Web Full Stack Junior de México en busca de mi primera oportunidad laboral. 5 años de estudio en el sector.",
+    "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707274229/Profile%20Pic/ProfileGrande_su2lwm.webp",
+    "email": "juanjgarcia230@gmail.com",
+    "phone": "(+52) 56 1373 1029",
+    "avaliable": true,
+    "summary": "Con una dedicación de 5 años al estudio del desarrollo web, me encuentro actualmente en busca de mi primera oportunidad laboral en este apasionante campo. Resido en el Estado de México, México, y durante los últimos dos años he enfocado mis esfuerzos en especializarme en el desarrollo web. Me considero una persona responsable, proactiva, con una gran capacidad de aprendizaje y una motivación inquebrantable por crecer en esta industria.",
+    "location": {
+      "address": "",
+      "postalCode": "56020",
+      "city": "Estado de México, México",
+      "countryCode": "MX",
+      "region": "México"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Juan J. García",
+        "url": "https://www.linkedin.com/in/juanjgarcia23"
+      },
+      {
+        "network": "X",
+        "username": "@JuanGMc23",
+        "url": "https://twitter.com/JuanGMc23"
+      },
+      {
+        "network": "GitHub",
+        "username": "JJGarciaMartinez",
+        "url": "https://github.com/JJGarciaMartinez"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "midudev",
+      "position": "Divulgador sobre Programación Web",
+      "url": "https://twitch.tv/midudev",
+      "startDate": "2021-01-01",
+      "endDate": null,
+      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Adevinta",
+      "position": "Lead Frontend Architect",
+      "url": "https://twitch.tv/midudev",
+      "startDate": "2016-06-01",
+      "endDate": "2022-09-01",
+      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Hubii",
+      "position": "Senior FrontEnd Developer",
+      "startDate": "2011-03-01",
+      "endDate": "2016-05-01",
+      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
+      "highlights": ["Started the company"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universitat Oberta de Catalunya",
+      "url": "https://www.uoc.edu/portal/es/index.html",
+      "area": "Ingeniero de Software",
+      "studyType": "Bachelor",
+      "startDate": "2003-01-01",
+      "endDate": "2009-01-01",
+      "score": "4.0",
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {},
+    {
+      "name": "HTML5",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/html5_pm2ukg.svg",
+      "color": "227,79,38"
+    },
+    {
+      "name": "CSS3",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/css_vmdclt.svg",
+      "color": "21,114,182"
+    },
+    {
+      "name": "Tailwind",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/tailwindcss_kxpcgn.svg",
+      "color": "56,189,248"
+    },
+    {
+      "name": "JavaScript",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
+      "color": "240,219,79"
+    },
+    {
+      "name": "TypeScript",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/typescript_xfc5bs.svg",
+      "color": "49,120,198"
+    },
+    {
+      "name": "Python",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/python_hvfzub.svg",
+      "color": "55,118,171"
+    },
+    {
+      "name": "Node",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347294/Assets/nodejs_abyqav.svg",
+      "color": "51,153,51"
+    },
+    {
+      "name": "Express",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707357057/Assets/expressjs_dark_j14wke.svg",
+      "color": "248,248,248"
+    },
+    {
+      "name": "MySQL",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/mysql_frj8pb.svg",
+      "color": "68,121,161"
+    },
+    {
+      "name": "PostgreSQL",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/postgresql_dspu29.svg",
+      "color": "49,100,140"
+    },
+    {
+      "name": "MongoDB",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/mongodb_tgqswc.svg",
+      "color": "71,162,72"
+    },
+    {
+      "name": "Git",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/git_ew5lvg.svg",
+      "color": "240,80,50"
+    },
+    {
+      "name": "GitHub",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/github_efbvh7.svg",
+      "color": "24,23,23"
+    },
+    {
+      "name": "GitLab",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347604/Assets/gitlab_kemdgl.svg",
+      "color": "226,67,41"
+    },
+    {
+      "name": "Next.js",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/nextjs_gcqrih.svg",
+      "color": "37,37,37"
+    },
+    {
+      "name": "React.js",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/react_ivwxfq.svg",
+      "color": "97,218,251"
+    },
+    {
+      "name": "Redux.js",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347297/Assets/redux_fhw8a3.svg",
+      "color": "118,74,188"
+    },
+    {
+      "name": "Astro",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347297/Assets/astro_txgkjs.svg",
+      "color": "255,93,1"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio",
+      "isActive": true,
+      "description": "Sitio web personal",
+      "technologies": [
+        {
+          "name": "TypeScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/typescript_xfc5bs.svg",
+          "color": "49,120,198"
+        },
+        {
+          "name": "Astro",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347297/Assets/astro_txgkjs.svg",
+          "color": "255,93,1"
+        },
+
+        {
+          "name": "React.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/react_ivwxfq.svg",
+          "color": "97,218,251"
+        },
+        {
+          "name": "Tailwind",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/tailwindcss_kxpcgn.svg",
+          "color": "56,189,248"
+        },
+        {
+          "name": "GitHub",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/github_efbvh7.svg",
+          "color": "24,23,23"
+        }
+      ],
+      "url": "https://github.com/juanjgarcia230/portfolio",
+      "github": "https://github.com/juanjgarcia230/portfolio",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707425407/ScreenShots/940shots_so_hdgtke.png"
+    },
+    {
+      "name": "Kimey Petshop",
+      "isActive": true,
+      "description": "Ecommerce de mascotas en linea, pensada para comprar alimento, accesorios y cuidado de la mascota",
+      "technologies": [
+        {
+          "name": "Next.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/nextjs_gcqrih.svg",
+          "color": "37,37,37"
+        },
+        {
+          "name": "MongoDB",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/mongodb_tgqswc.svg",
+          "color": "71,162,72"
+        },
+        {
+          "name": "Cloudinary",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707182622/samples/cloudinary-icon.png",
+          "color": "52,72,197"
+        },
+        {
+          "name": "Tailwind",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/tailwindcss_kxpcgn.svg",
+          "color": "56,189,248"
+        },
+        {
+          "name": "GitHub",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/github_efbvh7.svg",
+          "color": "24,23,23"
+        },
+        {
+          "name": "Material UI",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707362632/Assets/materialui_l2vvj2.svg",
+          "color": "87,87,87"
+        }
+      ],
+      "url": "https://pet-shop-peach.vercel.app/",
+      "github": "https://github.com/PF-Henrry/petShop",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707419956/ScreenShots/891shots_so_vralcw.png"
+    },
+    {
+      "name": "JavaFX ATM",
+      "isActive": false,
+      "description": "Pequeño proyecto de JavaFX hecho para mi universidad para simular un cajero automático",
+
+      "technologies": [
+        {
+          "name": "JavaFX",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707421115/Assets/java_gcd485.svg",
+          "color": "255,99,71"
+        },
+        {
+          "name": "XML",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707421286/Assets/xml-document-svgrepo-com_kqhics.svg",
+          "color": "226,67,41"
+        },
+        {
+          "name": "Scene Builder",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707421618/Assets/SceneBuilderLogo_ydnd8b.png",
+          "color": "250,154,0"
+        },
+        {
+          "name": "Intellij",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707421762/Assets/intellijidea_voigke.svg",
+          "color": "39,40,45"
+        }
+      ],
+      "url": "https://pet-shop-peach.vercel.app/",
+      "github": "https://github.com/PF-Henrry/petShop",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707419956/ScreenShots/581shots_so_liv3iq.png"
+    },
+    {
+      "name": "Porftolio V1",
+      "isActive": false,
+      "description": "Pequeño proyecto de JavaFX hecho para mi universidad para simular un cajero automático",
+
+      "technologies": [
+        {
+          "name": "HTML5",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/html5_pm2ukg.svg",
+          "color": "227,79,38"
+        },
+        {
+          "name": "CSS3",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/css_vmdclt.svg",
+          "color": "21,114,182"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
+          "color": "240,219,79"
+        }
+      ],
+      "url": "https://pet-shop-peach.vercel.app/",
+      "github": "https://github.com/PF-Henrry/petShop",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707419869/ScreenShots/855shots_so_kdhz1s.png"
+    }
+  ]
+}
