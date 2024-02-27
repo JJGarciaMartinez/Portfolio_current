@@ -39,6 +39,21 @@ const { title } = Astro.props;
   :root {
     color-scheme: light dark;
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(20, 49, 70, 0.5);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(20, 49, 70, 0.4);
+  }
   html {
     font-family: "Lexend Variable", sans-serif;
     @apply bg-[#040a11] text-white;

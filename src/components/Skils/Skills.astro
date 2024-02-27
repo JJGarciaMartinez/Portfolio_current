@@ -5,7 +5,9 @@ import Gear from "@/icons/Gear.astro";
 
 <div class="skills-container">
   <section class="mb-10 flex flex-row justify-between">
-    <div class="text-3xl font-bold flex flex-row items-center gap-2">
+    <div
+      class="text-2xl md:text-3xl font-bold flex flex-row items-center gap-2"
+    >
       <Gear />
       <p>Habilidades Técnicas</p>
     </div>
@@ -14,20 +16,6 @@ import Gear from "@/icons/Gear.astro";
     <Carousel client:only="react" />
   </section>
 </div>
-
-<script>
-  const button = document.querySelector("button");
-  const section = document.querySelector("#skills-slider");
-  const timeline = document.querySelector("#timeline-section");
-
-  if (button) {
-    button.addEventListener("click", () => {
-      if (section) section.classList.toggle("hidden");
-
-      if (timeline) timeline.classList.toggle("hidden");
-    });
-  }
-</script>
 
 <style>
   .skills-container {

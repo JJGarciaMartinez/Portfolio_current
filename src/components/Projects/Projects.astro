@@ -13,136 +13,144 @@ import { Image } from "astro:assets";
   </h1>
 
   <div class="project-card-container">
-    {
-      projects.map(
-        ({ name, description, image, url, isActive, technologies, github }) => (
-          <section class="project-card">
-            <figure class="project-image">
-              <img src={image} alt={name} />
-            </figure>
-            <section class="project-info">
-              <span class="flex flex-row items-center justify-between">
-                <h1 class="!font-medium !mb-0">{name}</h1>
+    <ul class="projects-list">
+      {
+        projects.map(
+          ({
+            name,
+            description,
+            image,
+            url,
+            isActive,
+            technologies,
+            github,
+          }) => (
+            <li class="project-card">
+              <section class="card-body flex flex-col">
+                <figure class="w-full rounded-lg overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={name}
+                    width={700}
+                    height={700}
+                    loading="lazy"
+                    class="w-full h-full duration-200"
+                  />
+                </figure>
+              </section>
 
-                {isActive ? <p>Activo</p> : <p>Inactivo</p>}
-              </span>
+              <section class="card-info">
+                <h2 class="text-lg font-bold mb-1 uppercase lg:text-xl">
+                  {name}
+                </h2>
+                <p class="text-xs text-slate-300 lg:text-sm">{description}</p>
 
-              <div>
-                <ul>
-                  {technologies.map((t: any) => {
-                    const { name, logo, color } = t;
-
-                    return (
-                      <li
-                        style={{
-                          backgroundColor: `rgba(${color},0.3)`,
-                          borderWidth: "1px",
-                          borderColor: `rgb(${color})`,
-                        }}
-                      >
-                        <img src={logo} alt={name} />
-                        <p>{name}</p>
-                      </li>
-                    );
-                  })}
-                </ul>
-
-                <p class="description">{description}</p>
-
-                <span class="project-links">
-                  {github && (
-                    <a href={github} target="_blank">
-                      <figure>
-                        <Github />
-                      </figure>
-                      Repositorio
-                    </a>
-                  )}
-                  {url && (
-                    <a href={url} target="_blank">
-                      <figure>
+                <ul class="flex flex-row flex-wrap gap-2">
+                  {technologies.map(({ name, logo, color }) => (
+                    <li
+                      style={{
+                        backgroundColor: `rgba(${color},0.3)`,
+                        borderWidth: "1px",
+                        borderColor: `rgb(${color})`,
+                      }}
+                      class="flex flex-row gap-1 items-center px-2 py-[2px] rounded-full !w-auto"
+                    >
+                      <figure class="w-4 h-4 lg:w-3 lg:h-3">
                         <Image
+                          src={logo}
+                          alt={name}
                           width={20}
                           height={20}
-                          src="https://res.cloudinary.com/juanjportfolio/image/upload/v1707441855/Assets/link-simple-horizontal_eoosre.svg"
-                          alt="Link"
+                          loading="lazy"
+                          class="w-full h-full"
                         />
                       </figure>
-                      Visitar
+                      <p class="text-xs hidden lg:block text-slate-200">
+                        {name}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+
+                <span class="card-links">
+                  <a href={github} target="_blank">
+                    <figure>
+                      <Github />
+                    </figure>
+                    <p>Repositorio</p>
+                  </a>
+
+                  {url ? (
+                    <a href={url} target="_blank">
+                      <figure>
+                        <Link />
+                      </figure>
+                      <p>Visitar</p>
                     </a>
-                  )}
+                  ) : null}
                 </span>
-              </div>
-            </section>
-          </section>
+              </section>
+            </li>
+          )
         )
-      )
-    }
+      }
+    </ul>
   </div>
 </div>
 
 <style>
   h1 {
-    @apply text-3xl font-bold mb-10 flex flex-row gap-3 items-center;
+    @apply text-2xl md:text-3xl font-bold mb-10 flex flex-row gap-3 items-center;
   }
   .projects-container {
-    @apply w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+    @apply w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none relative;
 
     .project-card-container {
-      @apply flex flex-col items-center gap-20 mb-4;
+      @apply relative;
 
-      .project-card {
-        @apply flex flex-row items-center gap-6 h-56 w-full;
+      /* first ul */
+      .projects-list {
+        @apply grid-flow-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10;
 
-        .project-image {
-          @apply w-[450px] rounded-lg border-2 border-slate-700 overflow-hidden h-full;
+        /* first li */
+        .project-card {
+          @apply relative flex flex-col bg-slate-700/20 rounded-2xl border-2 border-slate-700 overflow-hidden;
 
-          & img {
-            @apply w-full h-full object-cover rounded-lg scale-105 duration-300;
-          }
-        }
+          .card-info {
+            @apply absolute py-4 px-6 lg:py-6 lg:px-4 flex flex-col justify-between bg-black/75 backdrop-blur-sm rounded-lg w-full h-full opacity-0 duration-200;
 
-        .project-info {
-          @apply w-2/4 flex flex-col gap-3 h-full;
+            /* Repository and Visit Links */
+            .card-links {
+              @apply flex flex-row items-center gap-6;
 
-          & div {
-            @apply flex flex-col justify-between h-full;
-          }
+              & a {
+                @apply flex flex-row items-center gap-2 text-sky-100 bg-slate-800/60 border border-slate-700 rounded-lg px-2 py-1 md:px-3 duration-200;
 
-          & ul {
-            @apply flex flex-wrap flex-row gap-2;
+                &:hover {
+                  @apply bg-slate-800/90 text-sky-300;
+                }
 
-            & li {
-              @apply flex flex-row items-center justify-center gap-2 px-3 py-[2px] rounded-full;
-              & p {
-                @apply text-xs;
-              }
-              & img {
-                @apply w-4 h-4;
-              }
-            }
-          }
+                & figure {
+                  @apply w-3 h-3 md:w-5 md:h-5 flex items-center justify-center;
+                }
 
-          .description {
-            @apply text-slate-400;
-          }
-
-          .project-links {
-            @apply flex flex-row gap-6;
-
-            & a {
-              @apply flex flex-row items-center gap-2;
-
-              & figure {
-                @apply w-6 h-6 flex items-center justify-center;
+                & p {
+                  @apply text-xs md:text-sm;
+                }
               }
             }
           }
-        }
 
-        &:hover {
-          & figure img {
-            @apply scale-100;
+          &:hover {
+            .card-info {
+              @apply opacity-100;
+            }
+
+            .card-body {
+              & figure img {
+                @apply scale-105;
+              }
+            }
           }
         }
       }

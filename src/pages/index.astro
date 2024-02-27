@@ -5,6 +5,8 @@ import Header from "@/components/Header/Header.astro";
 import Projects from "@/components/Projects/Projects.astro";
 import ToTop from "@/components/ToTop.astro";
 import Skills from "@/components/Skils/Skills.astro";
+import Experience from "@/components/Experience/Experience.astro";
+import About from "@/components/About/About.astro";
 ---
 
 <Layout title="Juan J. García">
@@ -15,6 +17,8 @@ import Skills from "@/components/Skils/Skills.astro";
     <Header />
     <Skills />
     <Projects />
+    <Experience />
+    <About />
   </main>
 </Layout>
 
@@ -22,7 +26,7 @@ import Skills from "@/components/Skils/Skills.astro";
 
 <style>
   .background-gradiant {
-    @apply absolute top-0 left-0 z-[-2] h-screen w-screen bg-[#040a11] bg-[radial-gradient(ellipse_80%_80%at_50%-20%,rgba(8,91,195,0.35),rgba(12,31,52,0))];
+    @apply absolute top-0 left-0 z-[-2] h-screen w-screen bg-[#040a11] bg-[radial-gradient(ellipse_80%_100%at_50%-20%,rgba(8,91,195,0.35),rgba(12,31,52,0))];
   }
 
   main {

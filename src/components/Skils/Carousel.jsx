@@ -17,6 +17,26 @@ export default function Carousel() {
     autoplaySpeed: 0,
     arrows: false,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   };
   return (
     <div className="slider-container">
@@ -25,7 +45,7 @@ export default function Carousel() {
           {skillsList.map((skill) => {
             const bgColor = skill?.color;
             return (
-              <section key={skill.name} className={`skill-box`}>
+              <section key={skill.name} className="skill-box">
                 <div
                   style={{
                     backgroundColor: `rgba(${bgColor},0.3)`,

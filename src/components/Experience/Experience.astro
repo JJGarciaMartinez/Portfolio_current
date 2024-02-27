@@ -1,7 +1,78 @@
 ---
+import Briefcase from "@/icons/Briefcase.astro";
+import Code from "@/icons/Code.astro";
+import Magnifying from "@/icons/Magnifying.astro";
+import { work } from "@cv";
 
+const dateFormat = new Intl.DateTimeFormat("es-MX", {
+  year: "numeric",
+  month: "long",
+});
 ---
 
-<div></div>
+<div class="experience-container" id="experiencia">
+  <h1>
+    <Briefcase />
+    Experiencia Profesional y Proyectos
+  </h1>
 
-<style></style>
+  <div class="relative ml-4">
+    <ol class="relative border-s dark:border-gray-700">
+      {
+        work.map((item) => (
+          <li class="mb-10 ms-6">
+            <span class="absolute flex items-center justify-center w-6 h-6  rounded-full -start-3 ring-8  ring-gray-900 bg-[#1b4a83] p-1">
+              {item.summary ? <Code /> : <Magnifying />}
+            </span>
+            <div class="flex flex-row flex-wrap md:flex-nowrap">
+              <section class="w-full pl-3">
+                <h3 class="flex items-center mb-1 text-base lg:text-lg font-semibold text-white">
+                  {item.name}
+                  {item.type ? (
+                    <span class="font-normal text-sm me-2 px-2.5 py-0.5 rounded-lg bg-slate-700/40 border border-slate-700 ms-3">
+                      {item.type}
+                    </span>
+                  ) : null}
+                </h3>
+                <time class="block mb-2 text-sm font-normal leading-none  text-gray-500">
+                  {item.endDate === null ? (
+                    "Actualmente"
+                  ) : (
+                    <p>
+                      {dateFormat.format(new Date(item.startDate))} -{" "}
+                      {dateFormat.format(new Date(item.endDate))}{" "}
+                    </p>
+                  )}
+                </time>
+              </section>
+              <section class="w-full flex flex-col gap-3 pl-3 lg:pl-0">
+                <p class="text-sm lg:text-base font-normal text-gray-400">
+                  {item.summary}
+                </p>
+
+                {item.url ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    class="text-sky-400 bg-slate-700/30 border border-slate-700 rounded-lg px-3 py-1 w-fit duration-200 hover:text-sky-500 hover:bg-slate-700/40"
+                  >
+                    Ver más
+                  </a>
+                ) : null}
+              </section>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</div>
+
+<style>
+  h1 {
+    @apply text-2xl md:text-3xl font-bold mb-10 flex flex-row gap-3 items-center;
+  }
+  .experience-container {
+    @apply py-16 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+  }
+</style>

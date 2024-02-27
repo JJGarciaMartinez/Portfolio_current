@@ -12,7 +12,7 @@
         @apply !flex !flex-row !items-center !gap-2 !justify-center py-[2px] px-0 rounded-full !bg-opacity-50;
 
         & figure {
-          @apply w-5 h-5;
+          @apply w-4 h-4 md:w-5 md:h-5;
 
           & img {
             @apply w-full h-full object-contain;
@@ -20,7 +20,7 @@
         }
 
         & h1 {
-          @apply text-white;
+          @apply text-xs md:text-base text-white;
         }
       }
     }

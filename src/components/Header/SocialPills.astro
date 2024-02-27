@@ -2,7 +2,7 @@
 import XTwitter from "@/icons/XTwitter.astro";
 import Github from "@/icons/Github.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
-import Send from "@/icons/Send.astro";
+import Whatsapp from "@/icons/Whatsapp.astro";
 import Envelope from "@/icons/Envelope.astro";
 import { basics } from "@cv";
 const { profiles: navItems, email } = basics;
@@ -23,9 +23,14 @@ const { profiles: navItems, email } = basics;
               <Github />
               <p>{item.username}</p>
             </a>
-          ) : (
+          ) : item.network === "LinkedIn" ? (
             <a href={item.url} target="_blank">
               <LinkedIn />
+              <p>{item.username}</p>
+            </a>
+          ) : (
+            <a href={item.url} target="_blank">
+              <Whatsapp />
               <p>{item.username}</p>
             </a>
           )}
@@ -35,7 +40,7 @@ const { profiles: navItems, email } = basics;
 
     <li>
       <a href=`mailto:${email}`>
-        <Envelope /> Contactame
+        <Envelope /> Contáctame
       </a>
     </li>
   </ul>
@@ -43,11 +48,16 @@ const { profiles: navItems, email } = basics;
   <style>
     .social-nav {
       @apply mt-10;
+
       & ul {
-        @apply flex flex-row flex-wrap items-center gap-x-5 gap-y-3;
+        @apply flex flex-row flex-wrap items-center gap-4 md:gap-x-5 md:gap-y-3;
 
         & li a {
           @apply flex flex-row items-center gap-2 bg-[rgba(12,31,52)] py-1 px-4 rounded-full text-sm border-[1px] border-slate-700 duration-200;
+
+          & p {
+            @apply hidden md:block;
+          }
 
           &:hover {
             @apply bg-slate-700;
