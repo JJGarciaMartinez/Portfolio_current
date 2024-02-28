@@ -16,15 +16,7 @@ import { Image } from "astro:assets";
     <ul class="projects-list">
       {
         projects.map(
-          ({
-            name,
-            description,
-            image,
-            url,
-            isActive,
-            technologies,
-            github,
-          }) => (
+          ({ name, description, image, url, technologies, github }) => (
             <li class="project-card">
               <section class="card-body flex flex-col">
                 <figure class="w-full rounded-lg overflow-hidden">
@@ -53,9 +45,9 @@ import { Image } from "astro:assets";
                         borderWidth: "1px",
                         borderColor: `rgb(${color})`,
                       }}
-                      class="flex flex-row gap-1 items-center px-2 py-[2px] rounded-full !w-auto"
+                      class="flex flex-row gap-1 items-center px-2 py-[2px] rounded-full !w-auto relative"
                     >
-                      <figure class="w-4 h-4 lg:w-3 lg:h-3">
+                      <figure class="w-4 h-4" id="technology">
                         <Image
                           src={logo}
                           alt={name}
@@ -65,9 +57,6 @@ import { Image } from "astro:assets";
                           class="w-full h-full"
                         />
                       </figure>
-                      <p class="text-xs hidden lg:block text-slate-200">
-                        {name}
-                      </p>
                     </li>
                   ))}
                 </ul>
@@ -114,7 +103,7 @@ import { Image } from "astro:assets";
 
         /* first li */
         .project-card {
-          @apply relative flex flex-col bg-slate-700/20 rounded-2xl border-2 border-slate-700 overflow-hidden;
+          @apply relative flex flex-col bg-[rgba(12,31,52)] rounded-3xl border-2 border-slate-700 overflow-hidden;
 
           .card-info {
             @apply absolute py-4 px-6 lg:py-6 lg:px-4 flex flex-col justify-between bg-black/75 backdrop-blur-sm rounded-lg w-full h-full opacity-0 duration-200;
@@ -124,10 +113,10 @@ import { Image } from "astro:assets";
               @apply flex flex-row items-center gap-6;
 
               & a {
-                @apply flex flex-row items-center gap-2 text-sky-100 bg-slate-800/60 border border-slate-700 rounded-lg px-2 py-1 md:px-3 duration-200;
+                @apply flex flex-row items-center gap-2 bg-slate-800/60 border border-slate-700 rounded-lg px-2 py-1 md:px-3 duration-200;
 
                 &:hover {
-                  @apply bg-slate-800/90 text-sky-300;
+                  @apply bg-slate-700/60 text-sky-100;
                 }
 
                 & figure {

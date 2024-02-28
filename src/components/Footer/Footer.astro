@@ -1,0 +1,42 @@
+---
+import { basics } from "@cv";
+
+const { profiles, name, github } = basics;
+
+const year = new Date().getFullYear();
+---
+
+<div class="footer-container">
+  <footer class="bg-white rounded-lg shadow dark:bg-gray-800">
+    <div
+      class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+    >
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        >© {year} -
+        <a href={github} class="hover:underline" target="_blank">{name}</a>
+      </span>
+      <ul
+        class="flex flex-wrap gap-4 items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
+      >
+        {
+          profiles &&
+            profiles.map((profile) => {
+              return (
+                <li>
+                  <a href={profile.url} class="hover:underline">
+                    {profile.network}
+                  </a>
+                </li>
+              );
+            })
+        }
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<style>
+  .footer-container {
+    @apply w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+  }
+</style>

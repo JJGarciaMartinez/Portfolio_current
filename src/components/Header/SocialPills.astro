@@ -3,9 +3,8 @@ import XTwitter from "@/icons/XTwitter.astro";
 import Github from "@/icons/Github.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import Whatsapp from "@/icons/Whatsapp.astro";
-import Envelope from "@/icons/Envelope.astro";
 import { basics } from "@cv";
-const { profiles: navItems, email } = basics;
+const { profiles: navItems } = basics;
 ---
 
 <nav class="social-nav">
@@ -37,12 +36,6 @@ const { profiles: navItems, email } = basics;
         </li>
       ))
     }
-
-    <li>
-      <a href=`mailto:${email}`>
-        <Envelope /> Contáctame
-      </a>
-    </li>
   </ul>
 
   <style>
@@ -60,7 +53,7 @@ const { profiles: navItems, email } = basics;
           }
 
           &:hover {
-            @apply bg-slate-700;
+            @apply bg-slate-700/60 text-sky-100;
           }
         }
       }

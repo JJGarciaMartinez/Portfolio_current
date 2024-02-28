@@ -4,6 +4,7 @@
     "label": "Egresado del bootcamp de SoyHenry y Desarrollador Web Full Stack Junior de México en busca de mi primera oportunidad laboral. 5 años de estudio en el sector.",
     "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707274229/Profile%20Pic/ProfileGrande_su2lwm.webp",
     "email": "juanjgarcia230@gmail.com",
+    "github": "https://github.com/JJGarciaMartinez",
     "phone": "(+52) 56 1373 1029",
     "avaliable": true,
     "summary": "Con una dedicación de 5 años al estudio del desarrollo web, me encuentro actualmente en busca de mi primera oportunidad laboral en este apasionante campo. Resido en el Estado de México, México, y durante los últimos dos años he enfocado mis esfuerzos en especializarme en el desarrollo web. Me considero una persona responsable, proactiva, con una gran capacidad de aprendizaje y una motivación inquebrantable por crecer en esta industria.",
@@ -17,7 +18,7 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "Juan J. García",
+        "username": "Juan García",
         "url": "https://www.linkedin.com/in/juanjgarcia23"
       },
       {
@@ -44,7 +45,8 @@
       "endDate": null
     },
     {
-      "name": "Kimey Petshop - Soy Henry",
+      "name": "Kimey Petshop",
+      "company": "Soy Henry",
       "position": "Divulgador sobre Programación Web",
       "url": "https://pet-shop-kimeipetshop.vercel.app/",
       "startDate": "2023-11-27",
@@ -218,6 +220,11 @@
           "name": "Tailwind",
           "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/tailwindcss_kxpcgn.svg",
           "color": "56,189,248"
+        },
+        {
+          "name": "Node",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347294/Assets/nodejs_abyqav.svg",
+          "color": "51,153,51"
         }
       ],
       "url": "https://www.juangarcia-dev.com/",
@@ -258,6 +265,11 @@
           "name": "Material UI",
           "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707362632/Assets/materialui_l2vvj2.svg",
           "color": "87,87,87"
+        },
+        {
+          "name": "Node",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347294/Assets/nodejs_abyqav.svg",
+          "color": "51,153,51"
         }
       ],
       "url": "https://pet-shop-peach.vercel.app/",
@@ -359,6 +371,11 @@
           "name": "JavaScript",
           "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
           "color": "240,219,79"
+        },
+        {
+          "name": "PHP",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709106185/Assets/php_dark_ye02ex.svg",
+          "color": "71,74,138"
         }
       ],
       "url": "https://portfolio-v1-lyart-eight.vercel.app/",

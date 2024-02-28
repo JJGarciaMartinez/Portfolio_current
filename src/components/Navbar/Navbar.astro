@@ -61,10 +61,17 @@ const navItems: { title: string; label: string; url: string }[] = [
       @apply flex flex-row gap-8 w-auto duration-300 ease-in-out py-3 px-6 rounded-full border-[2px] border-transparent;
 
       & li {
-        @apply cursor-pointer flex items-center;
+        @apply cursor-pointer flex items-center relative;
 
         & a {
-          @apply text-xs lg:text-sm w-auto;
+          @apply text-xs lg:text-sm w-auto duration-200;
+
+          &:hover {
+            @apply text-sky-100;
+          }
+          &:active {
+            @apply text-sky-100;
+          }
         }
       }
 
@@ -77,7 +84,7 @@ const navItems: { title: string; label: string; url: string }[] = [
   .navbar-scroll.scrolled {
     @apply py-2;
     & ul {
-      @apply bg-[rgba(4,10,17,0.5)] border-[1px] border-[rgba(255,255,255,0.2)] backdrop-blur;
+      @apply bg-slate-800/60 border-[1px] border-[rgba(255,255,255,0.2)] backdrop-blur;
     }
   }
 </style>
