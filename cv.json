@@ -198,7 +198,7 @@
     {
       "name": "Portfolio",
       "isActive": true,
-      "description": "Mi portfolio personal. Conocimientos, experiencias y proyectos. (Version 1.24.02)",
+      "description": "Mi portfolio personal. Conocimientos, experiencias y proyectos. (Version 1.24.1)",
       "technologies": [
         {
           "name": "TypeScript",
@@ -229,7 +229,7 @@
       ],
       "url": "https://www.juangarcia-dev.com/",
       "github": "https://github.com/JJGarciaMartinez/Portfolio_current",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707425407/ScreenShots/940shots_so_hdgtke.png"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709143513/ScreenShots/147shots_so_a9u64s.png"
     },
     {
       "name": "Kimey Petshop",
