@@ -279,7 +279,7 @@
     {
       "name": "Proyecto Individual - Dogs",
       "isActive": true,
-      "description": "Ecommerce de mascotas en linea, pensada para comprar alimento, accesorios y cuidado de la mascota",
+      "description": "Proyecto individual para el bootcamp de Soy Henry, hecho con React.js para el frontend y PostgreSQL para la base de datos",
       "technologies": [
         {
           "name": "React.js",
