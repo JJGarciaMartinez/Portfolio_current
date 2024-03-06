@@ -1,5 +1,9 @@
 ---
 import { basics } from "@cv";
+import XTwitter from "@/icons/XTwitter.astro";
+import Github from "@/icons/Github.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import Whatsapp from "@/icons/Whatsapp.astro";
 
 const { profiles, name, github } = basics;
 
@@ -7,30 +11,47 @@ const year = new Date().getFullYear();
 ---
 
 <div class="footer-container">
-  <footer class="bg-white rounded-lg shadow dark:bg-gray-800">
+  <footer class="rounded-lg shadow bg-slate-700/50">
     <div
-      class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      class="w-full flex flex-col gap-y-4 mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
     >
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-        >© {year} -
-        <a href={github} class="hover:underline" target="_blank">{name}</a>
-      </span>
-      <ul
-        class="flex flex-wrap gap-4 items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
-      >
-        {
-          profiles &&
-            profiles.map((profile) => {
-              return (
+      <section>
+        <ul>
+          {
+            profiles &&
+              profiles.map((profile) => (
                 <li>
-                  <a href={profile.url} class="hover:underline">
-                    {profile.network}
-                  </a>
+                  {profile.network === "X" ? (
+                    <a href={profile.url}>
+                      <XTwitter />
+                    </a>
+                  ) : profile.network === "GitHub" ? (
+                    <a href={profile.url}>
+                      <Github />
+                    </a>
+                  ) : profile.network === "LinkedIn" ? (
+                    <a href={profile.url}>
+                      <LinkedIn />
+                    </a>
+                  ) : (
+                    <a href={profile.url}>
+                      <Whatsapp />
+                    </a>
+                  )}
                 </li>
-              );
-            })
-        }
-      </ul>
+              ))
+          }
+        </ul>
+      </section>
+
+      <span class="w-full flex justify-center text-sm text-slate-400">
+        <p>
+          &copy; {year}
+          <a href={github}>
+            {name}.
+          </a>
+        </p>
+      </span>
     </div>
   </footer>
 </div>
@@ -38,5 +59,27 @@ const year = new Date().getFullYear();
 <style>
   .footer-container {
     @apply w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+  }
+
+  section {
+    @apply w-full flex items-center justify-center relative;
+
+    & ul {
+      @apply w-full md:w-1/4 flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-slate-400;
+    }
+
+    &::after {
+      content: "";
+      @apply absolute left-0 w-1/4 md:w-2/5 h-[1px] bg-slate-500;
+    }
+
+    &::before {
+      content: "";
+      @apply absolute right-0 w-1/4 md:w-2/5 h-[1px] bg-slate-500;
+    }
+  }
+
+  a {
+    @apply duration-200 hover:text-slate-200;
   }
 </style>

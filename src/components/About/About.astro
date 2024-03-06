@@ -1,5 +1,6 @@
 ---
 import User from "@/icons/User.astro";
+import Download from "@/icons/Download.astro";
 import { Image } from "astro:assets";
 import { basics } from "@cv";
 
@@ -52,12 +53,37 @@ const { image } = basics;
       />
     </figure>
   </article>
+  <a
+    href="/files/Juan_Garcia.pdf"
+    download="Juan_Garcia.pdf"
+    class="overflow-hidden !mt-10 relative flex items-center justify-center bg-slate-700/30 border border-slate-700 rounded-lg px-4 py-2 w-full md:w-fit duration-200 hover:text-sky-100 hover:bg-slate-700/60"
+  >
+    <p class="download-text duration-200">Descargar CV</p>
+
+    <figure class="absolute w-6 h-6 -translate-y-10 duration-200">
+      <Download class="w-full h-full" />
+    </figure>
+  </a>
 </div>
 <style>
   h1 {
     @apply text-2xl md:text-3xl font-bold mb-10 flex flex-row gap-3 items-center;
   }
   .about-container {
-    @apply pb-16 md:pb-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+    @apply pb-16 md:pb-36 w-full flex flex-col mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+  }
+
+  a {
+    @apply shadow-slate-400/50 shadow;
+  }
+
+  a:hover {
+    .download-text {
+      @apply opacity-0;
+    }
+
+    & figure {
+      @apply translate-y-0;
+    }
   }
 </style>
