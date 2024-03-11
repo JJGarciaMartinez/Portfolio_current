@@ -16,7 +16,7 @@ Basado en el diseño de <a href="https://github.com/midudev/porfolio.dev">Miguel
 <img src="https://img.shields.io/github/stars/JJGarciaMartinez/Portfolio_current.svg" />
 </section>
 </div>
-<p>&nbsp;</p>
+
 <div align="center">
 
 ![Astro](https://img.shields.io/badge/Astro-E34F3a?style=for-the-badge&logo=Astro&logoColor=white)
@@ -27,7 +27,7 @@ Basado en el diseño de <a href="https://github.com/midudev/porfolio.dev">Miguel
 
 
 </div>
-<p>&nbsp;</p>
+
 <figure>
 <img src="https://res.cloudinary.com/juanjportfolio/image/upload/v1709213976/ScreenShots/563shots_so_x1yl4f.png" />
 </figure>
