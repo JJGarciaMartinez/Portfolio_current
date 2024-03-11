@@ -3,6 +3,7 @@ import User from "@/icons/User.astro";
 import Download from "@/icons/Download.astro";
 import { Image } from "astro:assets";
 import { basics } from "@cv";
+import Icon from "@/icons/Icon.astro";
 
 const { image } = basics;
 ---
@@ -64,26 +65,47 @@ const { image } = basics;
       <Download class="w-full h-full" />
     </figure>
   </a>
+  <!-- <div style="background-color: rgb(4, 22, 53);" class="css-rozv0a">
+    <figure class="w-1/2 h-auto">
+      <Icon />
+    </figure>
+  </div> -->
+
+  <style>
+    .css-rozv0a {
+      display: flex;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: calc(50% - 100px);
+      top: calc(50% - 100px);
+      z-index: 1;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      border-radius: 50px;
+    }
+
+    h1 {
+      @apply text-2xl md:text-3xl font-bold mb-10 flex flex-row gap-3 items-center;
+    }
+    .about-container {
+      @apply pb-16 md:pb-36 w-full flex flex-col mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+    }
+
+    a {
+      @apply shadow-slate-400/50 shadow;
+    }
+
+    a:hover {
+      .download-text {
+        @apply opacity-0;
+      }
+
+      & figure {
+        @apply translate-y-0;
+      }
+    }
+  </style>
 </div>
-<style>
-  h1 {
-    @apply text-2xl md:text-3xl font-bold mb-10 flex flex-row gap-3 items-center;
-  }
-  .about-container {
-    @apply pb-16 md:pb-36 w-full flex flex-col mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
-  }
-
-  a {
-    @apply shadow-slate-400/50 shadow;
-  }
-
-  a:hover {
-    .download-text {
-      @apply opacity-0;
-    }
-
-    & figure {
-      @apply translate-y-0;
-    }
-  }
-</style>
