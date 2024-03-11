@@ -14,11 +14,13 @@ Basado en el diseño de <a href="https://github.com/midudev/porfolio.dev">Miguel
 </p>
 <section style="display:flex;justify-content:center; align-items:center; gap:0.5rem; margin-top:1.5rem; margin-bottom:1.5rem">
 <img src="https://img.shields.io/github/last-commit/JJGarciaMartinez/Portfolio_current.svg" />
-|
+<p>|</p>
 <img src="https://img.shields.io/github/license/JJGarciaMartinez/Portfolio_current.svg" />
-|
+
+<p>|</p>
 <img src="https://img.shields.io/github/forks/JJGarciaMartinez/Portfolio_current.svg" />
-|
+<p>|</p>
+
 <img src="https://img.shields.io/github/stars/JJGarciaMartinez/Portfolio_current.svg" />
 </section>
 </div>
