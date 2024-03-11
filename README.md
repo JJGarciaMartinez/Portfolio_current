@@ -20,7 +20,7 @@ Basado en el diseño de <a href="https://github.com/midudev/porfolio.dev">Miguel
 </section>
 </div>
 
-<div align="center">
+<div align="center" style="margin-top:1.5rem; margin-bottom:1.5rem">
 
 ![Astro](https://img.shields.io/badge/Astro-E34F3a?style=for-the-badge&logo=Astro&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
