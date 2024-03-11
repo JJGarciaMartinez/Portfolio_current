@@ -1,0 +1,161 @@
+---
+import Close from "@/icons/Close.astro";
+import Info from "@/icons/Info.astro";
+---
+
+<div>
+  <button id="myBtn" class="duration-200 hover:text-slate-200">Créditos.</button
+  >
+
+  <div id="myModal" class="modal">
+    <div class="modal-container">
+      <span class="close">
+        <figure class="w-6 h-6">
+          <Close />
+        </figure>
+      </span>
+      <section class="modal-body">
+        <h2
+          class="text-slate-50 font-bold text-lg flex flex-row gap-2 items-center md:text-2xl"
+        >
+          <figure class="w-6 h-6">
+            <Info />
+          </figure>
+          Créditos del Portafolio.
+        </h2>
+        <ul>
+          <li>
+            <p>Diseño original del Portafolio hecho por:</p>
+            <a target="_blank" href="https://github.com/midudev/porfolio.dev"
+              >MiduDev</a
+            >
+          </li>
+          <li>
+            <p>Slider obtenido de la biblioteca:</p>
+            <a target="_blank" href="https://react-slick.neostack.com/"
+              >React Slick</a
+            >
+          </li>
+          <li>
+            <p>Mockups creados con:</p>
+            <a target="_blank" href="https://shots.so/">Shots.so</a>
+          </li>
+          <li>
+            <p>Formulario y Timeline obtenidos de:</p>
+            <p class="flex flex-row gap-1">
+              <a target="_blank" href="https://flowbite.com/">Flowbite</a>
+              &
+              <a target="_blank" href="https://svgl.vercel.app/">Vercel</a>
+            </p>
+          </li>
+          <li>
+            <p>Servicio de Email por:</p>
+            <a target="_blank" href="https://web3forms.com/">Web3forms</a>
+          </li>
+          <li>
+            <p>Iconos obtenidos de:</p>
+            <a target="_blank" href="https://phosphoricons.com/"
+              >Phosphor Icons</a
+            >
+          </li>
+          <li>
+            <p>Deployed por:</p>
+            <a target="_blank" href="https://vercel.com/">Vercel</a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="modal-footer">
+        <p>
+          Desarrollado por <a
+            target="_blank"
+            href="https://github.com/JJGarciaMartinez">Juan J. García</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("myModal");
+  const btn = document.getElementById("myBtn");
+  const span = document.querySelector(".close");
+  const body = document.querySelector(".body-layout");
+
+  if (modal && btn && span && body) {
+    const openModal = () => {
+      modal.style.display = "block";
+      body.classList.add("!overflow-hidden");
+    };
+
+    const closeModal = () => {
+      modal.style.display = "none";
+      body.classList.remove("!overflow-hidden");
+    };
+
+    // Cuando el usuario hace clic en el botón, abrir el modal
+    btn.addEventListener("click", openModal);
+
+    // Cuando el usuario hace clic en la X, cerrar el modal
+    span.addEventListener("click", closeModal);
+
+    // Cuando el usuario hace clic fuera del modal, cerrar el modal
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  }
+</script>
+
+<style>
+  .modal {
+    @apply hidden fixed left-0 top-0 w-full h-full overflow-auto z-50 backdrop-blur-md;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Modal Content/Box */
+  .modal-container {
+    @apply w-11/12 flex flex-col mx-auto container lg:max-w-4xl md:max-w-2xl select-none p-5 border border-gray-600 rounded-lg shadow-lg bg-slate-800/90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  /* The Close Button */
+  .close {
+    @apply duration-200 text-slate-200/40 absolute top-4 right-4;
+  }
+
+  .close:hover,
+  .close:focus {
+    @apply text-slate-100 cursor-pointer no-underline;
+  }
+
+  .modal-body ul {
+    @apply flex flex-col gap-3 mt-6;
+
+    & li {
+      @apply md:flex flex-row gap-2 text-slate-200 text-sm md:text-base md:font-normal font-semibold w-fit;
+
+      & a {
+        @apply flex no-underline text-sky-400 duration-150 font-normal;
+
+        &:hover {
+          @apply text-sky-300;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    @apply mt-8 text-slate-400;
+
+    & a {
+      @apply underline duration-150;
+
+      &:hover {
+        @apply text-sky-300;
+      }
+    }
+  }
+</style>

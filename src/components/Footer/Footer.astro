@@ -1,5 +1,6 @@
 ---
 import { basics } from "@cv";
+import Modal from "@/components/Modal/Modal.astro";
 import XTwitter from "@/icons/XTwitter.astro";
 import Github from "@/icons/Github.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
@@ -44,13 +45,17 @@ const year = new Date().getFullYear();
         </ul>
       </section>
 
-      <span class="w-full flex justify-center text-sm text-slate-400">
+      <span
+        class="w-full flex flex-row items-center flex-nowrap justify-center gap-2 text-sm text-slate-400"
+      >
         <p>
           &copy; {year}
           <a href={github}>
             {name}.
           </a>
         </p>
+        <p>-</p>
+        <Modal />
       </span>
     </div>
   </footer>
