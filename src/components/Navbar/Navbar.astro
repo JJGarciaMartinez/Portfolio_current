@@ -1,14 +1,14 @@
 ---
 const navItems: { title: string; label: string; url: string }[] = [
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
-  },
-  {
     title: "Experiencia",
     label: "experiencia",
     url: "/#experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
   },
   {
     title: "Sobre mí",
@@ -88,6 +88,10 @@ const navItems: { title: string; label: string; url: string }[] = [
         @apply cursor-pointer text-sm flex items-center;
       }
     }
+  }
+  .navbar-scroll a.active {
+    color: #ff0000; /* Cambia el color al que desees */
+    /* Otros estilos de resaltado */
   }
 
   .navbar-scroll.scrolled {
