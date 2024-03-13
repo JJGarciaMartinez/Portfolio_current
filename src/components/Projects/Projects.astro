@@ -106,7 +106,9 @@ import { Image } from "astro:assets";
           @apply relative flex flex-col bg-[rgba(12,31,52)] rounded-3xl border-2 border-slate-700 overflow-hidden;
 
           .card-info {
-            @apply absolute py-4 px-6 lg:py-6 lg:px-4 flex flex-col justify-between bg-black/75 backdrop-blur-sm rounded-lg w-full h-full opacity-0 duration-200;
+            @apply absolute py-4 px-6 lg:py-6 lg:px-4 flex-col justify-between  rounded-lg w-full h-full duration-200 z-10 hidden;
+            animation: opacity;
+            animation-duration: 300ms;
 
             /* Repository and Visit Links */
             .card-links {
@@ -130,9 +132,14 @@ import { Image } from "astro:assets";
             }
           }
 
+          &::before {
+            content: "";
+            @apply absolute top-0 left-0 w-full h-full bg-black/70 backdrop-blur-sm z-[1] opacity-0 duration-200;
+          }
+
           &:hover {
             .card-info {
-              @apply opacity-100;
+              @apply flex;
             }
 
             .card-body {
@@ -140,9 +147,22 @@ import { Image } from "astro:assets";
                 @apply scale-105;
               }
             }
+
+            &::before {
+              @apply opacity-100;
+            }
           }
         }
       }
+    }
+  }
+
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 </style>
