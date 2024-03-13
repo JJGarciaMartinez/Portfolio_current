@@ -28,6 +28,7 @@ import CaretTop from "@/icons/Caret-Top.astro";
   if (toTop) {
     toTop.addEventListener("click", () => {
       window.scrollTo(0, 0);
+      history.replaceState(null, "", window.location.pathname);
     });
   }
 

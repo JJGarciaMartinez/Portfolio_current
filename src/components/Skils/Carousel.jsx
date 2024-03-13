@@ -13,10 +13,11 @@ export default function Carousel() {
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 1500,
     autoplaySpeed: 0,
     arrows: false,
     cssEase: "linear",
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,

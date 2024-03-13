@@ -27,17 +27,30 @@
   }
 }
 
+.slick-list {
+  @apply cursor-grab active:cursor-grabbing;
+}
+
 .slick-slider.slick-initialized {
   @apply relative py-2;
   &::after {
     content: "";
-    @apply absolute top-0 left-0 w-full h-full;
+    @apply absolute h-full w-16 top-0 left-0;
     background: rgb(4, 10, 17);
     background: linear-gradient(
       90deg,
       rgba(4, 10, 17, 1) 0%,
+      rgba(255, 255, 255, 0) 75%
+    );
+  }
+
+  &::before {
+    content: "";
+    @apply absolute h-full w-16 top-0 right-0 z-10;
+    background: rgb(4, 10, 17);
+    background: linear-gradient(
+      90deg,
       rgba(255, 255, 255, 0) 25%,
-      rgba(255, 255, 255, 0) 75%,
       rgba(4, 10, 17, 1) 100%
     );
   }
