@@ -61,7 +61,7 @@ const { image } = basics;
   >
     <p class="download-text duration-200">Descargar CV</p>
 
-    <figure class="absolute w-6 h-6 -translate-y-10 duration-200">
+    <figure class="absolute w-6 h-6 -translate-y-10 duration-200 text-white">
       <Download class="w-full h-full" />
     </figure>
   </a>
@@ -101,6 +101,10 @@ const { image } = basics;
     a:hover {
       .download-text {
         @apply opacity-0;
+      }
+
+      & figure {
+        @apply translate-y-0;
       }
     }
   </style>
