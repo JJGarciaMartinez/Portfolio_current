@@ -40,14 +40,18 @@
   },
   "work": [
     {
-      "name": "Muy Pronto más...",
-      "startDate": null,
-      "endDate": null
+      "name": "Gestor de Embarcaciones",
+      "company": "El Bigua",
+      "position": "FrontEnd Web Developer",
+      "startDate": "2024-02-26",
+      "endDate": null,
+      "summary": "Participo como diseñador web y desarrollador de FrontEnd en el proyecto de Gestor de Embarcaciones, una empresa club para embarcaciones. En colaboración con un equipo de dos desarrolladores adicionales, me encargó del diseño y la interfaz de usuario de la plataforma que permite la gestión de embarcaciones.",
+      "type": "Freelance"
     },
     {
       "name": "Kimey Petshop",
       "company": "Soy Henry",
-      "position": "Divulgador sobre Programación Web",
+      "position": "FrontEnd Web Developer",
       "url": "https://pet-shop-kimeipetshop.vercel.app/",
       "startDate": "2023-11-27",
       "endDate": "2024-01-18",
@@ -185,15 +189,10 @@
     },
     {
       "language": "English",
-      "fluency": "Advanced"
+      "fluency": "B1"
     }
   ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
+  "references": [],
   "projects": [
     {
       "name": "Portfolio",
