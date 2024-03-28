@@ -23,19 +23,19 @@ const year = new Date().getFullYear();
               profiles.map((profile) => (
                 <li>
                   {profile.network === "X" ? (
-                    <a href={profile.url}>
+                    <a href={profile.url} target="_blank">
                       <XTwitter />
                     </a>
                   ) : profile.network === "GitHub" ? (
-                    <a href={profile.url}>
+                    <a href={profile.url} target="_blank">
                       <Github />
                     </a>
                   ) : profile.network === "LinkedIn" ? (
-                    <a href={profile.url}>
+                    <a href={profile.url} target="_blank">
                       <LinkedIn />
                     </a>
                   ) : (
-                    <a href={profile.url}>
+                    <a href={profile.url} target="_blank">
                       <Whatsapp />
                     </a>
                   )}
@@ -50,7 +50,7 @@ const year = new Date().getFullYear();
       >
         <p>
           &copy; {year}
-          <a href={github}>
+          <a href={github} target="_blank">
             {name}.
           </a>
         </p>

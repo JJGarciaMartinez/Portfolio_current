@@ -59,10 +59,12 @@ const exp: Item[] = work;
                   <p class="py-1 font-semibold text-sm text-slate-100">
                     {item.company ? item.company : null}
                   </p>
+
                   <p class="block mb-1 text-sm leading-none  text-gray-400 font-medium">
                     {item.position}
                   </p>
-                  <time class="block mb-2 text-sm font-normal leading-none  text-gray-500">
+
+                  <time class="block mb-2 text-sm font-normal leading-none text-gray-500 capitalize">
                     {item.endDate === null && item.startDate === null ? (
                       "Por ahora buscando..."
                     ) : item.endDate === null ? (

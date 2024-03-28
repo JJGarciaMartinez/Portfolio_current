@@ -1,8 +1,5 @@
 ---
 import EnvelopeSimple from "@/icons/EnvelopeSimple.astro";
-const accessKey = import.meta.env.ACCESS_KEY;
-
-const encryptedAccessKey = btoa(accessKey);
 ---
 
 <div id="contacto" class="contact-container">
@@ -11,11 +8,10 @@ const encryptedAccessKey = btoa(accessKey);
   </h1>
   <div class="contact-form-container">
     <form
-      action="https://api.web3forms.com/submit"
+      action="https://formspree.io/f/xnqegvpg"
       method="POST"
       class="w-full max-w-lg md:mx-auto"
     >
-      <input type="hidden" name="access_key" value={btoa(encryptedAccessKey)} />
       <div class="relative z-0 w-full mb-5 group">
         <input
           type="email"
@@ -67,11 +63,10 @@ const encryptedAccessKey = btoa(accessKey);
         <div class="relative z-0 w-full mb-5 group">
           <input
             type="tel"
-            pattern="[0-9]{12}"
             name="floating_phone"
             id="floating_phone"
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            placeholder=" "
+            placeholder=""
             required
           />
           <label

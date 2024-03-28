@@ -2,7 +2,7 @@
   "basics": {
     "name": "Juan García",
     "label": "Egresado del bootcamp de SoyHenry y Desarrollador Web Full Stack Junior de México en busca de mi primera oportunidad laboral. 5 años de estudio en el sector.",
-    "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1710352973/Profile%20Pic/profilePic2_my9fus.png",
+    "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707274229/Profile%20Pic/ProfileGrande_su2lwm.webp",
     "email": "juanjgarcia230@gmail.com",
     "github": "https://github.com/JJGarciaMartinez",
     "phone": "(+52) 56 1373 1029",
@@ -34,7 +34,7 @@
       {
         "network": "WhatsApp",
         "username": "Whatsapp",
-        "url": "https://wa.me/5613731029"
+        "url": "https://wa.me/525613731029"
       }
     ]
   },
@@ -45,7 +45,7 @@
       "position": "FrontEnd Web Developer",
       "startDate": "2024-02-26",
       "endDate": null,
-      "summary": "Participo como diseñador web y desarrollador de FrontEnd en el proyecto de Gestor de Embarcaciones, una empresa club para embarcaciones. En colaboración con un equipo de dos desarrolladores adicionales, me encargó del diseño y la interfaz de usuario de la plataforma que permite la gestión de embarcaciones.",
+      "summary": "Participo como diseñador web y desarrollador de FrontEnd en el proyecto de Gestor de Embarcaciones, una empresa club para embarcaciones. En colaboración con un equipo de 6 desarrolladores en total, me encargo del diseño y la interfaz de usuario de la plataforma que permite la gestión de embarcaciones.",
       "type": "Freelance"
     },
     {
@@ -195,6 +195,36 @@
   "references": [],
   "projects": [
     {
+      "name": "Layout Challenge",
+      "isActive": false,
+      "description": "Parte de mi formación como desarrollador web front end, he estado practicando mis skills maquetando paginas web en React. Este es un proyecto de prueba para mi portafolio.",
+      "technologies": [
+        {
+          "name": "HTML5",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/html5_pm2ukg.svg",
+          "color": "227,79,38"
+        },
+        {
+          "name": "CSS3",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/css_vmdclt.svg",
+          "color": "60,117,194"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
+          "color": "240,219,79"
+        },
+        {
+          "name": "React.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/react_ivwxfq.svg",
+          "color": "97,218,251"
+        }
+      ],
+      "url": "https://layout-challenge-zeta.vercel.app/",
+      "github": "https://github.com/JJGarciaMartinez/Layout-Challenge",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662455/ScreenShots/450shots_so_h2fdiq.webp"
+    },
+    {
       "name": "Portfolio",
       "isActive": true,
       "description": "Mi portfolio personal. Conocimientos, experiencias y proyectos. (Version 1.24.1)",
@@ -228,7 +258,7 @@
       ],
       "url": "https://www.juangarcia-dev.com/",
       "github": "https://github.com/JJGarciaMartinez/Portfolio_current",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709763881/ScreenShots/147shots_so_pbzqbb.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662454/ScreenShots/298shots_so_yb79eb.webp"
     },
     {
       "name": "Kimey Petshop",
@@ -273,7 +303,7 @@
       ],
       "url": "https://pet-shop-peach.vercel.app/",
       "github": "https://github.com/PF-Henrry/petShop",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709763881/ScreenShots/891shots_so_t69zml.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662456/ScreenShots/78shots_so_zrxwhk.webp"
     },
     {
       "name": "Proyecto Individual - Dogs",
@@ -318,7 +348,7 @@
       ],
       "url": "https://pi-dogs-sable.vercel.app/",
       "github": "https://github.com/JJGarciaMartinez/PI-Dogs",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709763881/ScreenShots/143shots_so_ubgwzy.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662454/ScreenShots/998shots_so_rq9hax.webp"
     },
     {
       "name": "JavaFX ATM",
@@ -348,7 +378,7 @@
         }
       ],
       "github": "https://github.com/JJGarciaMartinez/JavaFX-ATM",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709763881/ScreenShots/581shots_so_xo6ii4.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662456/ScreenShots/657shots_so_cjolhj.webp"
     },
     {
       "name": "Porftolio V1",
@@ -379,7 +409,7 @@
       ],
       "url": "https://portfolio-v1-lyart-eight.vercel.app/",
       "github": "https://github.com/JJGarciaMartinez/Portfolio_v1",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709763881/ScreenShots/855shots_so_nmcm4d.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662457/ScreenShots/13shots_so_v5jmtm.webp"
     }
   ]
 }

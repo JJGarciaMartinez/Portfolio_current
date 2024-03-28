@@ -3,12 +3,8 @@ import { basics } from "@cv";
 import { Image } from "astro:assets";
 import SocialPills from "./SocialPills.astro";
 
-const { profiles, name, avaliable: status, label } = basics;
+const { profiles, name, avaliable: status, label, image: profilePic } = basics;
 const linkedIn = profiles[0].url;
-
-const resonse = await fetch("https://api.github.com/users/JJGarciaMartinez");
-const data = await resonse.json();
-const profilePic = data.avatar_url;
 ---
 
 <section id="header">
