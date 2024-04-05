@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 #VSC
 .vscode
+
+#Vercel
+.vercel
