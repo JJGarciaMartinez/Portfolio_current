@@ -20,7 +20,7 @@ const year = new Date().getFullYear();
         <ul>
           {
             profiles &&
-              profiles.map((profile) => (
+              profiles.map((profile: any) => (
                 <li>
                   {profile.network === "X" ? (
                     <a href={profile.url} target="_blank">

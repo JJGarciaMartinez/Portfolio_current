@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "C:/Users/Juan5/Documents/SoyHenry/BootCamp/Proyectos/Portfolio_current",
+    "baseUrl": "./",
     "paths": {
       "@cv": ["./cv.json"],
       "@/*": ["src/*"]
