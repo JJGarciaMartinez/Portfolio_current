@@ -2,10 +2,13 @@
 import User from "@/icons/User.astro";
 import Download from "@/icons/Download.astro";
 import { Image } from "astro:assets";
+import { basics } from "@cv";
 
-const response = await fetch("https://api.github.com/users/JJGarciaMartinez");
-const data = await response.json();
-const profilePic = data.avatar_url;
+const profilePic = basics.image;
+
+// const response = await fetch("https://api.github.com/users/JJGarciaMartinez");
+// const data = await response.json();
+// const profilePic = data.avatar_url;
 ---
 
 <div id="sobre-mi" class="about-container">

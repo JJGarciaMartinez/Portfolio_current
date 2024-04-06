@@ -106,6 +106,13 @@ import Info from "@/icons/Info.astro";
         closeModal();
       }
     });
+
+    // Cuando el usuario hace clic en la tecla "Escape", cerrar el modal
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
   }
 </script>
 

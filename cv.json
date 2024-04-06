@@ -198,7 +198,7 @@
     {
       "name": "Layout Challenge",
       "isActive": false,
-      "description": "Parte de mi formación como desarrollador web front end, he estado practicando mis skills maquetando paginas web en React. Este es un proyecto de prueba para mi portafolio.",
+      "description": "Parte de mi formación como desarrollador web front end, he estado practicando mis skills maquetando paginas web en React.",
       "technologies": [
         {
           "name": "HTML5",
@@ -219,6 +219,11 @@
           "name": "React.js",
           "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/react_ivwxfq.svg",
           "color": "97,218,251"
+        },
+        {
+          "name": "Node",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347294/Assets/nodejs_abyqav.svg",
+          "color": "51,153,51"
         }
       ],
       "url": "https://layout-challenge-zeta.vercel.app/",
@@ -267,24 +272,9 @@
       "description": "Ecommerce de mascotas en linea, pensada para comprar alimento, accesorios y cuidado de la mascota",
       "technologies": [
         {
-          "name": "Next.js",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/nextjs_gcqrih.svg",
-          "color": "37,37,37"
-        },
-        {
-          "name": "MongoDB",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/mongodb_tgqswc.svg",
-          "color": "71,162,72"
-        },
-        {
-          "name": "Zustand",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709007566/Assets/favicon_xsqt1p.png",
-          "color": "170,93,57"
-        },
-        {
-          "name": "Cloudinary",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707182622/samples/cloudinary-icon.png",
-          "color": "52,72,197"
+          "name": "JavaScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
+          "color": "240,219,79"
         },
         {
           "name": "Tailwind",
@@ -292,14 +282,34 @@
           "color": "56,189,248"
         },
         {
-          "name": "Material UI",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707362632/Assets/materialui_l2vvj2.svg",
-          "color": "87,87,87"
+          "name": "Next.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/nextjs_gcqrih.svg",
+          "color": "37,37,37"
+        },
+        {
+          "name": "Zustand",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709007566/Assets/favicon_xsqt1p.png",
+          "color": "170,93,57"
         },
         {
           "name": "Node",
           "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347294/Assets/nodejs_abyqav.svg",
           "color": "51,153,51"
+        },
+        {
+          "name": "MongoDB",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/mongodb_tgqswc.svg",
+          "color": "71,162,72"
+        },
+        {
+          "name": "Cloudinary",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707182622/samples/cloudinary-icon.png",
+          "color": "52,72,197"
+        },
+        {
+          "name": "Material UI",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707362632/Assets/materialui_l2vvj2.svg",
+          "color": "87,87,87"
         }
       ],
       "url": "https://pet-shop-peach.vercel.app/",
@@ -312,9 +322,9 @@
       "description": "Proyecto individual para el bootcamp de Soy Henry, hecho con React.js para el frontend y PostgreSQL para la base de datos",
       "technologies": [
         {
-          "name": "React.js",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/react_ivwxfq.svg",
-          "color": "97,218,251"
+          "name": "JavaScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
+          "color": "240,219,79"
         },
         {
           "name": "CSS3",
@@ -322,9 +332,14 @@
           "color": "21,114,182"
         },
         {
-          "name": "PostgreSQL",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/postgresql_dspu29.svg",
-          "color": "49,100,140"
+          "name": "React.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/react_ivwxfq.svg",
+          "color": "97,218,251"
+        },
+        {
+          "name": "Redux.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347297/Assets/redux_fhw8a3.svg",
+          "color": "118,74,188"
         },
         {
           "name": "Node",
@@ -342,14 +357,64 @@
           "color": "60,117,194"
         },
         {
-          "name": "Redux.js",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347297/Assets/redux_fhw8a3.svg",
-          "color": "118,74,188"
+          "name": "PostgreSQL",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/postgresql_dspu29.svg",
+          "color": "49,100,140"
         }
       ],
       "url": "https://pi-dogs-sable.vercel.app/",
       "github": "https://github.com/JJGarciaMartinez/PI-Dogs",
       "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662454/ScreenShots/998shots_so_rq9hax.webp"
+    },
+    {
+      "name": "Rick and Morty API",
+      "isActive": false,
+      "description": "Consumo de la Api de Rick and Morty, proyecto web para el bootcamp de Soy Henry, hecho con React.js para el frontend y PostgreSQL para la base de datos",
+
+      "technologies": [
+        {
+          "name": "JavaScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
+          "color": "240,219,79"
+        },
+        {
+          "name": "CSS3",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/css_vmdclt.svg",
+          "color": "21,114,182"
+        },
+        {
+          "name": "React.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/react_ivwxfq.svg",
+          "color": "97,218,251"
+        },
+        {
+          "name": "Redux.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347297/Assets/redux_fhw8a3.svg",
+          "color": "118,74,188"
+        },
+        {
+          "name": "Node",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347294/Assets/nodejs_abyqav.svg",
+          "color": "51,153,51"
+        },
+        {
+          "name": "Express",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707357057/Assets/expressjs_dark_j14wke.svg",
+          "color": "248,248,248"
+        },
+        {
+          "name": "Sequelize",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707447302/Assets/sequelize_v0kqzb.svg",
+          "color": "60,117,194"
+        },
+        {
+          "name": "PostgreSQL",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347293/Assets/postgresql_dspu29.svg",
+          "color": "49,100,140"
+        }
+      ],
+      "github": "https://github.com/JJGarciaMartinez/rickAndMorty",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1712425063/ScreenShots/50shots_so_fy5dif.png"
     },
     {
       "name": "JavaFX ATM",
@@ -364,7 +429,7 @@
         },
         {
           "name": "XML",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707421286/Assets/xml-document-svgrepo-com_kqhics.svg",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1712425863/Assets/xml-icon-svg_up6jvy.svg",
           "color": "226,67,41"
         },
         {
@@ -382,9 +447,9 @@
       "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662456/ScreenShots/657shots_so_cjolhj.webp"
     },
     {
-      "name": "Porftolio V1",
+      "name": "Primer Portfolio",
       "isActive": false,
-      "description": "Primer portfolio desarrollado con tecnologías vanilla.",
+      "description": "Este es mi primer portfolio hecho con tecnologías vanilla, este fue hecho hace 2 años.",
 
       "technologies": [
         {
