@@ -1,5 +1,7 @@
 ---
 import EnvelopeSimple from "@/icons/EnvelopeSimple.astro";
+
+const urlForm = import.meta.env.PUBLIC_URL_FORM;
 ---
 
 <div id="contacto" class="contact-container">
@@ -7,11 +9,7 @@ import EnvelopeSimple from "@/icons/EnvelopeSimple.astro";
     <EnvelopeSimple /> Contáctame
   </h1>
   <div class="contact-form-container">
-    <form
-      action="https://formspree.io/f/xnqegvpg"
-      method="POST"
-      class="w-full max-w-lg md:mx-auto"
-    >
+    <form action={urlForm} method="POST" class="w-full max-w-lg md:mx-auto">
       <div class="relative z-0 w-full mb-5 group">
         <input
           type="email"
