@@ -47,7 +47,8 @@ import { Image } from "astro:assets";
                         borderWidth: "1px",
                         borderColor: `rgb(${color})`,
                       }}
-                      class="flex flex-row gap-1 items-center px-2 py-[2px] rounded-full !w-auto relative"
+                      class="flex flex-row gap-1 items-center px-2 py-[2px] rounded-full !w-auto relative z-10 hint--bottom-right"
+                      aria-label={name}
                     >
                       <figure
                         class="w-3 h-3 md:w-3 md:h-3 lg:w-4 lg:h-4"
@@ -92,7 +93,14 @@ import { Image } from "astro:assets";
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/hint.css@3.0.0/Gruntfile.min.js"
+></script>
+
 <style>
+  .hint--bottom-right::after {
+    @apply text-xs;
+  }
+
   h1 {
     @apply text-2xl md:text-3xl font-bold mb-10 flex flex-row gap-3 items-center;
   }

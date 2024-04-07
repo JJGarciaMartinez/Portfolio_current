@@ -5,10 +5,6 @@ import { Image } from "astro:assets";
 import { basics } from "@cv";
 
 const profilePic = basics.image;
-
-// const response = await fetch("https://api.github.com/users/JJGarciaMartinez");
-// const data = await response.json();
-// const profilePic = data.avatar_url;
 ---
 
 <div id="sobre-mi" class="about-container">
@@ -59,7 +55,7 @@ const profilePic = basics.image;
   </article>
   <a
     href="/files/Juan_Garcia.pdf"
-    download="Juan_Garcia.pdf"
+    download="Juan Garcia.pdf"
     class="overflow-hidden !mt-10 relative flex items-center justify-center bg-slate-700/30 border border-slate-700 rounded-lg px-4 py-2 w-full md:w-fit duration-200 hover:text-sky-100 hover:bg-slate-700/60"
   >
     <p class="download-text duration-200">Descargar CV</p>
