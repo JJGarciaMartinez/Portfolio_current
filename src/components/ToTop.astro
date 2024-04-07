@@ -4,15 +4,16 @@ import CaretTop from "@/icons/Caret-Top.astro";
 
 <div class="to-top-container">
   <figure class="to-top" :class="{'show':show}">
-    <div class="hidden w-full h-full absolute lg:block" id="to-top"></div>
+    <div
+      class="hidden w-full h-full absolute lg:block hint--top"
+      aria-label="Ir arriba"
+    >
+    </div>
     <CaretTop class="w-full h-full" />
   </figure>
 </div>
 
 <script>
-  import tippy from "tippy.js";
-  import "tippy.js/dist/tippy.css";
-
   window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".to-top");
     if (!navbar) return;
@@ -31,11 +32,6 @@ import CaretTop from "@/icons/Caret-Top.astro";
       history.replaceState(null, "", window.location.pathname);
     });
   }
-
-  tippy("#to-top", {
-    content: "Ir arriba",
-    placement: "bottom",
-  });
 </script>
 
 <style>

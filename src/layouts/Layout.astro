@@ -1,10 +1,11 @@
 ---
 // Supports weights 100-900
 import "@fontsource-variable/lexend";
+import SpeedInsights from "@vercel/speed-insights/astro";
+
 interface Props {
   title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -15,12 +16,17 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/hint.css@3.0.0/hint.min.css"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class="body-layout overflow-y-auto">
     <slot />
   </body>
+  <SpeedInsights />
 </html>
 <style is:global>
   @tailwind base;

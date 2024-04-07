@@ -22,8 +22,8 @@ const profilePic = data.avatar_url;
           height={100}
         />
         <span
-          class=`profile-status-dot ${status ? "active" : "disabled"}`
-          id={status ? "status" : "no-status"}></span>
+          class=`profile-status-dot ${status ? "active hint--success" : "disabled hint--error"} hint--bottom`
+          aria-label={status ? "Disponible" : "Trabajando actualmente"}></span>
       </figure>
       <a href={linkedIn} target="_blank">
         <div class=`profile-status ${status ? "active" : "disabled"}`>
@@ -40,21 +40,6 @@ const profilePic = data.avatar_url;
     <SocialPills />
   </div>
 </section>
-
-<script>
-  import tippy from "tippy.js";
-  import "tippy.js/dist/tippy.css";
-
-  tippy("#status", {
-    content: "Disponible",
-    placement: "bottom",
-  });
-
-  tippy("#no-status", {
-    content: "No disponible",
-    placement: "bottom",
-  });
-</script>
 
 <style>
   @tailwind base;
