@@ -2,6 +2,9 @@
 import EnvelopeSimple from "@/icons/EnvelopeSimple.astro";
 
 const urlForm = import.meta.env.PUBLIC_URL_FORM;
+
+const stylesLabel =
+  "peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6";
 ---
 
 <div id="contacto" class="contact-container">
@@ -10,94 +13,75 @@ const urlForm = import.meta.env.PUBLIC_URL_FORM;
   </h1>
   <div class="contact-form-container">
     <form action={urlForm} method="POST" class="w-full max-w-lg md:mx-auto">
-      <div class="relative z-0 w-full mb-5 group">
+      <div class="input_container group">
         <input
           type="email"
-          name="floating_email"
-          id="floating_email"
-          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          name="email"
+          id="email"
+          class="input_form peer"
           placeholder=" "
           required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
         />
-        <label
-          for="floating_email"
-          class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-          >Email</label
-        >
+        <label for="email" class={stylesLabel}>Email</label>
       </div>
       <div class="grid md:grid-cols-2 md:gap-6">
-        <div class="relative z-0 w-full mb-5 group">
+        <div class="input_container group">
           <input
             type="text"
-            name="floating_first_name"
-            id="floating_first_name"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            name="name"
+            id="name"
+            class="input_form peer"
             placeholder=" "
             required
           />
-          <label
-            for="floating_first_name"
-            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >Nombre</label
-          >
+          <label for="name" class={stylesLabel}>Nombre</label>
         </div>
-        <div class="relative z-0 w-full mb-5 group">
+        <div class="input_container group">
           <input
             type="text"
-            name="floating_last_name"
-            id="floating_last_name"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            name="last_name"
+            id="last_name"
+            class="input_form peer"
             placeholder=" "
             required
           />
-          <label
-            for="floating_last_name"
-            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >Apellido</label
-          >
+          <label for="last_name" class={stylesLabel}>Apellido</label>
         </div>
       </div>
       <div class="grid md:grid-cols-2 md:gap-6">
-        <div class="relative z-0 w-full mb-5 group">
+        <div class="input_container group">
           <input
             type="tel"
-            name="floating_phone"
-            id="floating_phone"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            name="phone"
+            id="phone"
+            class="input_form peer"
             placeholder=""
             required
           />
-          <label
-            for="floating_phone"
-            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >Telefono</label
-          >
+          <label for="phone" class={stylesLabel}>Telefono</label>
         </div>
-        <div class="relative z-0 w-full mb-5 group">
+        <div class="input_container group">
           <input
             type="text"
-            name="floating_company"
-            id="floating_company"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            name="company"
+            id="company"
+            class="input_form peer"
             placeholder=" "
             required
           />
-          <label
-            for="floating_company"
-            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >Empresa</label
-          >
+          <label for="company" class={stylesLabel}>Empresa</label>
         </div>
       </div>
       <div>
         <div class="mb-5">
           <label
-            for="floating_message"
+            for="message"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >Mensaje</label
           >
           <textarea
-            id="floating_message"
+            id="message"
             rows="4"
             name="message"
             class="block p-2.5 w-full text-sm rounded-lg bg-slate-700/50 border-gray-600 placeholder-gray-400 text-white h-20 max-h-40 min-h-10"
@@ -139,6 +123,14 @@ const urlForm = import.meta.env.PUBLIC_URL_FORM;
 
     & form {
       @apply md:w-1/2 md:h-1/2;
+
+      .input_container {
+        @apply relative z-0 w-full mb-5;
+      }
+
+      .input_form {
+        @apply block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 appearance-none text-white border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-0;
+      }
     }
 
     .contact-form-title {
