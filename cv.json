@@ -1,13 +1,13 @@
 {
   "basics": {
     "name": "Juan García",
-    "label": "Egresado del bootcamp de SoyHenry y Desarrollador Web Full Stack Junior de México en busca de mi primera oportunidad laboral. 5 años de estudio en el sector.",
+    "label": "Desarrollador Web Front End Junior, ex estudiante de UPIICSA y egresado del bootcamp Soy Henry, con 5 años de estudio en programación y 3 años especializandome en el Desarrollo Web Front End.",
     "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707274229/Profile%20Pic/ProfileGrande_su2lwm.webp",
+    "alternativeImage": "https://res.cloudinary.com/juanjportfolio/image/upload/v1714439801/Profile%20Pic/download20210805080713_lxuvoa.webp",
     "email": "juanjgarcia230@gmail.com",
     "github": "https://github.com/JJGarciaMartinez",
     "phone": "(+52) 56 1373 1029",
     "avaliable": true,
-    "summary": "Con una dedicación de 5 años al estudio del desarrollo web, me encuentro actualmente en busca de mi primera oportunidad laboral en este apasionante campo. Resido en el Estado de México, México, y durante los últimos dos años he enfocado mis esfuerzos en especializarme en el desarrollo web. Me considero una persona responsable, proactiva, con una gran capacidad de aprendizaje y una motivación inquebrantable por crecer en esta industria.",
     "location": {
       "address": "",
       "postalCode": "56020",
@@ -195,6 +195,36 @@
   ],
   "references": [],
   "projects": [
+    {
+      "name": "R&m API Challenge",
+      "isActive": false,
+      "description": "Pequeño proyecto hecho para una entrevista técnica. Creada usando solo React, custom hooks, infinite scroll para renderizar y sin gestor de estados.",
+      "technologies": [
+        {
+          "name": "HTML5",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/html5_pm2ukg.svg",
+          "color": "227,79,38"
+        },
+        {
+          "name": "CSS3",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/css_vmdclt.svg",
+          "color": "60,117,194"
+        },
+        {
+          "name": "TypeScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/typescript_xfc5bs.svg",
+          "color": "49,120,198"
+        },
+        {
+          "name": "React.js",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/react_ivwxfq.svg",
+          "color": "97,218,251"
+        }
+      ],
+      "url": "https://rick-and-morty-challenge-virid.vercel.app/",
+      "github": "https://github.com/JJGarciaMartinez/RickAndMorty-challenge",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1714437310/ScreenShots/523shots_so_lnfbdn.webp"
+    },
     {
       "name": "Layout Challenge",
       "isActive": false,
@@ -414,12 +444,12 @@
         }
       ],
       "github": "https://github.com/JJGarciaMartinez/rickAndMorty",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1712425063/ScreenShots/50shots_so_fy5dif.png"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1714439675/ScreenShots/50shots_so_mrxauy.webp"
     },
     {
       "name": "JavaFX ATM",
       "isActive": false,
-      "description": "Pequeño proyecto de JavaFX hecho para mi universidad para simular un cajero automático",
+      "description": "Proyecto ATM sencillo de Front End con JavaFX para la universidad, hecho con Scene Builder y IntelliJ IDEA.",
 
       "technologies": [
         {

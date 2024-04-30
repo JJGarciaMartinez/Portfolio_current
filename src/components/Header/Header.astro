@@ -20,6 +20,9 @@ const profilePic = data.avatar_url;
           alt={`Profile picture of ${name}`}
           width={100}
           height={100}
+          loading="lazy"
+          decoding="async"
+          class="profile-pic"
         />
         <span
           class=`profile-status-dot ${status ? "active hint--success" : "disabled hint--error"} hint--bottom`
@@ -55,7 +58,7 @@ const profilePic = data.avatar_url;
       & figure {
         @apply w-16 h-16 rounded-full relative border-2 border-slate-500/50;
 
-        & img {
+        .profile-pic {
           @apply w-full h-full rounded-full object-cover;
         }
 

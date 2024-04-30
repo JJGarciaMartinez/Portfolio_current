@@ -15,17 +15,18 @@ import { Image } from "astro:assets";
   <div class="project-card-container">
     <ul class="projects-list">
       {
-        projects.map(
+        projects?.map(
           ({ name, description, image, url, technologies, github }) => (
             <li class="project-card">
               <section class="card-body flex flex-col">
                 <figure class="w-full rounded-lg overflow-hidden">
                   <Image
                     src={image}
-                    alt={name}
+                    alt={`Screenshot of ${name}`}
                     width={700}
                     height={700}
                     loading="lazy"
+                    decoding="async"
                     class="w-full h-full duration-200"
                   />
                 </figure>
@@ -40,40 +41,62 @@ import { Image } from "astro:assets";
                 </p>
 
                 <ul class="flex flex-row flex-wrap gap-2">
-                  {technologies.map(({ name, logo, color }) => (
-                    <li
-                      style={{
-                        backgroundColor: `rgba(${color},0.3)`,
-                        borderWidth: "1px",
-                        borderColor: `rgb(${color})`,
-                      }}
-                      class="flex flex-row gap-1 items-center px-2 py-[2px] rounded-full !w-auto relative z-10 hint--bottom-right"
-                      aria-label={name}
-                    >
-                      <figure
-                        class="w-3 h-3 md:w-3 md:h-3 lg:w-4 lg:h-4"
-                        id="technology"
+                  {technologies?.map(({ name, logo, color }) => {
+                    const colorHex = (color: string) => {
+                      const [r, g, b] = color.split(",");
+
+                      const [red, green, blue] = [r, g, b].map((value) =>
+                        parseInt(value)
+                      );
+
+                      const redHex = red.toString(16).padStart(2, "0");
+                      const greenHex = green.toString(16).padStart(2, "0");
+                      const blueHex = blue.toString(16).padStart(2, "0");
+
+                      // Combinar los valores hexadecimales para formar el color completo
+                      const hexColor = `#${redHex}${greenHex}${blueHex}`;
+                      // console.log(hexColor);
+                      return hexColor;
+                    };
+
+                    return (
+                      <li
+                        style={{
+                          backgroundColor: `rgba(${color},0.3)`,
+                          borderWidth: "1px",
+                          borderColor: `${colorHex(color)}`,
+                        }}
+                        class={`flex flex-row gap-1 items-center px-2 py-[2px] rounded-full !w-auto relative z-10 hint--bottom-right`}
+                        aria-label={name}
                       >
-                        <Image
-                          src={logo}
-                          alt={name}
-                          width={20}
-                          height={20}
-                          loading="lazy"
-                          class="w-full h-full"
-                        />
-                      </figure>
-                    </li>
-                  ))}
+                        <figure
+                          class="w-3 h-3 md:w-3 md:h-3 lg:w-4 lg:h-4"
+                          id="technology"
+                        >
+                          <Image
+                            src={logo}
+                            alt={name}
+                            width={20}
+                            height={20}
+                            loading="lazy"
+                            decoding="async"
+                            class="w-full h-full"
+                          />
+                        </figure>
+                      </li>
+                    );
+                  })}
                 </ul>
 
                 <span class="card-links">
-                  <a href={github} target="_blank">
-                    <figure>
-                      <Github />
-                    </figure>
-                    <p>Repositorio</p>
-                  </a>
+                  {github ? (
+                    <a href={github} target="_blank">
+                      <figure>
+                        <Github />
+                      </figure>
+                      <p>Repositorio</p>
+                    </a>
+                  ) : null}
 
                   {url ? (
                     <a href={url} target="_blank">
@@ -94,8 +117,14 @@ import { Image } from "astro:assets";
 </div>
 
 <style>
-  .hint--bottom-right::after {
-    @apply text-xs;
+  .hint--bottom-right {
+    &::after {
+      @apply text-xs bg-[#1b4a83] rounded mt-[5px];
+    }
+
+    &::before {
+      @apply bg-[#1b4a83] mt-[1.5px];
+    }
   }
 
   h1 {
@@ -117,8 +146,8 @@ import { Image } from "astro:assets";
 
           .card-info {
             @apply absolute py-4 px-6 md:py-4 md:px-4 lg:py-6 lg:px-4 flex-col justify-between  rounded-lg w-full h-full duration-200 z-10 hidden;
-            animation: opacity ease-in-out;
-            animation-duration: 300ms;
+            animation: fadeIn ease-in-out;
+            animation-duration: 250ms;
 
             /* Repository and Visit Links */
             .card-links {
@@ -144,7 +173,7 @@ import { Image } from "astro:assets";
 
           &::before {
             content: "";
-            @apply absolute top-0 left-0 w-full h-full bg-black/70 backdrop-blur-sm z-[1] opacity-0 duration-200;
+            @apply absolute top-0 left-0 w-full h-full bg-black/75 backdrop-blur-sm z-[1] opacity-0 duration-200;
           }
 
           &:hover {
@@ -167,9 +196,10 @@ import { Image } from "astro:assets";
     }
   }
 
-  @keyframes opacity {
+  @keyframes fadeIn {
     0% {
       opacity: 0;
+      transform: translateY(10px);
     }
     100% {
       opacity: 1;
