@@ -1,8 +1,8 @@
 ---
 interface Item {
   name: string | undefined;
-  startDate: null | Date | string | undefined;
-  endDate: null | Date | string | undefined;
+  startDate?: null | Date | string | undefined;
+  endDate?: null | Date | string | undefined;
   company?: undefined | string;
   position?: undefined | string;
   url?: undefined | string;
@@ -33,25 +33,31 @@ const exp: Item[] = work;
   <div class="relative ml-4">
     <ol class="relative border-s dark:border-gray-700">
       {
-        exp.map((item: Item) => {
+        exp?.map((item: Item) => {
           const fortedStartDate = dateFormat.format(
-            new Date(item.startDate as string)
+            new Date(item?.startDate as string)
           );
           const fortedEndDate = dateFormat.format(
-            new Date(item.endDate as string)
+            new Date(item?.endDate as string)
           );
           return (
             <li class="mb-10 ms-6">
               <span class="absolute flex items-center justify-center w-6 h-6  rounded-full -start-3 ring-8  ring-gray-900 bg-[#1b4a83] p-1">
-                {item.summary ? <Code /> : <Magnifying />}
+                {item?.type == "Trabajo" ? (
+                  <Briefcase />
+                ) : item?.type ? (
+                  <Code />
+                ) : (
+                  <Magnifying />
+                )}
               </span>
               <div class="flex flex-row flex-wrap md:flex-nowrap">
                 <section class="w-full pl-3">
                   <div class="flex items-center text-lg lg:text-xl font-bold text-slate-200">
-                    <p>{item.name}</p>
+                    <p>{item?.name}</p>
                     {item.type ? (
                       <span class="font-normal text-sm me-2.5 px-2.5 py-0.5 rounded-full bg-slate-700/40 border border-slate-700 ms-3">
-                        {item.type}
+                        {item?.type}
                       </span>
                     ) : null}
                   </div>
@@ -61,11 +67,11 @@ const exp: Item[] = work;
                   </p>
 
                   <p class="block mb-1 text-sm leading-none  text-gray-400 font-medium">
-                    {item.position}
+                    {item?.position}
                   </p>
 
                   <time class="block mb-2 text-sm font-normal leading-none text-gray-500 capitalize">
-                    {item.endDate === null && item.startDate === null ? (
+                    {item?.endDate === null && item?.startDate === null ? (
                       "Por ahora buscando..."
                     ) : item.endDate === null ? (
                       <p>
@@ -79,7 +85,7 @@ const exp: Item[] = work;
                   </time>
                 </section>
                 <section class="w-full flex flex-col gap-3 pl-3 mt-3 lg:pl-0 lg:mt-0">
-                  <p class="text-sm lg:text-base font-normal text-gray-400">
+                  <p class="text-sm lg:text-base font-normal text-gray-400 text-pretty">
                     {item.summary}
                   </p>
 
