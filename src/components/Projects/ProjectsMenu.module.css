@@ -1,0 +1,61 @@
+.projectsMenu {
+  .projectsContainer {
+    @apply flex flex-col gap-4;
+
+    .buttonsContainer {
+      @apply flex items-center justify-center gap-0 md:gap-3 w-full bg-slate-700/30 rounded-lg border-slate-700 border;
+
+      & button {
+        @apply px-4 py-2 text-slate-300 relative md:rounded-md text-xs lg:text-sm border-none cursor-pointer w-full md:w-auto;
+        transition: background-color 150ms ease-in-out;
+
+        &::after {
+          content: "";
+          @apply absolute bottom-0 left-0 right-0 h-[2px] bg-slate-500;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 150ms ease-in-out;
+        }
+
+        &:hover {
+          @apply bg-slate-700/30;
+
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+
+        &.active {
+          @apply text-slate-50 bg-slate-700/40;
+
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    .contentContainer {
+      @apply bg-slate-800/20 px-5 py-5 rounded-lg flex items-center justify-center border border-slate-700/30;
+      min-height: 600px;
+
+      & ul li {
+        animation: fadeIn ease-in-out;
+        animation-duration: 0.5s;
+      }
+    }
+  }
+}
+
+.fadeContainer {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  transform: translateY(10px);
+  opacity: 0;
+}

@@ -1,13 +1,13 @@
 {
   "basics": {
     "name": "Juan García",
-    "label": "Desarrollador Web Front End Junior, ex estudiante de UPIICSA y egresado del bootcamp Soy Henry, con 5 años de estudio en programación y 3 años especializandome en el Desarrollo Web Front End.",
+    "label": "Desarrollador Web Front End, ex estudiante de UPIICSA y egresado del bootcamp Soy Henry. He estudiado por más de 5 años programación y llevo 3 años especializandome en el Desarrollo Web Front End.",
     "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707274229/Profile%20Pic/ProfileGrande_su2lwm.webp",
     "alternativeImage": "https://res.cloudinary.com/juanjportfolio/image/upload/v1714439801/Profile%20Pic/download20210805080713_lxuvoa.webp",
     "email": "juanjgarcia230@gmail.com",
     "github": "https://github.com/JJGarciaMartinez",
     "phone": "(+52) 56 1373 1029",
-    "avaliable": true,
+    "avaliable": false,
     "location": {
       "address": "",
       "postalCode": "56020",
@@ -40,13 +40,23 @@
   },
   "work": [
     {
+      "name": "Desarrollo web",
+      "company": "ACRI, S. C.",
+      "position": "Desarrollador web Front End",
+      "startDate": "2024-05-27",
+      "endDate": null,
+      "summary": "ACRI es una empresa de asesoría y capacitación en prevención de riesgos laborales, fundada en 2005. Ofrece servicios en seguridad industrial, higiene, ergonomía y protección ambiental, siendo también un laboratorio acreditado en evaluaciones del ambiente laboral. Trabaja con clientes de diversos sectores para reducir riesgos y promover la integridad en el trabajo.",
+      "type": "Trabajo",
+      "url": "https://www.acrisc.com"
+    },
+    {
       "name": "Gestor de Embarcaciones",
       "company": "El Bigua",
       "position": "FrontEnd Web Developer",
       "startDate": "2024-02-26",
       "endDate": null,
-      "summary": "Participo como diseñador web y desarrollador de FrontEnd en el proyecto de Gestor de Embarcaciones, una empresa club para embarcaciones. En colaboración con un equipo de 6 desarrolladores en total, me encargo del diseño y la interfaz de usuario de la plataforma que permite la gestión de embarcaciones.",
-      "type": "Freelance",
+      "summary": "Participo como diseñador web y desarrollador de FrontEnd en el proyecto de Gestor de Embarcaciones, para un club de embarcaciones. En colaboración con un equipo de 6 desarrolladores en total, me encargo del diseño y la interfaz de usuario de la plataforma que permite la gestión de embarcaciones.",
+      "type": "Proyecto",
       "url": "https://github.com/Club-de-pesca-El-Bigua/El-Bigua-app"
     },
     {
@@ -198,6 +208,7 @@
     {
       "name": "R&m API Challenge",
       "isActive": false,
+      "typeProject": "frontend",
       "description": "Pequeño proyecto hecho para una entrevista técnica. Creada usando solo React, custom hooks, infinite scroll para renderizar y sin gestor de estados.",
       "technologies": [
         {
@@ -228,6 +239,7 @@
     {
       "name": "Layout Challenge",
       "isActive": false,
+      "typeProject": "frontend",
       "description": "Parte de mi formación como desarrollador web front end, he estado practicando mis skills maquetando paginas web en React.",
       "technologies": [
         {
@@ -263,12 +275,18 @@
     {
       "name": "Portfolio",
       "isActive": true,
+      "typeProject": "frontend",
       "description": "Mi portfolio personal. Conocimientos, experiencias y proyectos. (Version 1.24.1)",
       "technologies": [
         {
           "name": "TypeScript",
           "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/typescript_xfc5bs.svg",
           "color": "49,120,198"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
+          "color": "240,219,79"
         },
         {
           "name": "Astro",
@@ -299,6 +317,7 @@
     {
       "name": "Kimey Petshop",
       "isActive": true,
+      "typeProject": "fullstack",
       "description": "Ecommerce de mascotas en linea, pensada para comprar alimento, accesorios y cuidado de la mascota",
       "technologies": [
         {
@@ -349,6 +368,7 @@
     {
       "name": "Proyecto Individual - Dogs",
       "isActive": true,
+      "typeProject": "fullstack",
       "description": "Proyecto individual para el bootcamp de Soy Henry, hecho con React.js para el frontend y PostgreSQL para la base de datos",
       "technologies": [
         {
@@ -399,6 +419,7 @@
     {
       "name": "Rick and Morty API",
       "isActive": false,
+      "typeProject": "fullstack",
       "description": "Consumo de la Api de Rick and Morty, proyecto web para el bootcamp de Soy Henry, hecho con React.js para el frontend y PostgreSQL para la base de datos",
 
       "technologies": [
@@ -449,6 +470,7 @@
     {
       "name": "JavaFX ATM",
       "isActive": false,
+      "typeProject": "others",
       "description": "Proyecto ATM sencillo de Front End con JavaFX para la universidad, hecho con Scene Builder y IntelliJ IDEA.",
 
       "technologies": [
@@ -479,7 +501,8 @@
     {
       "name": "Primer Portfolio",
       "isActive": false,
-      "description": "Este es mi primer portfolio hecho con tecnologías vanilla, este fue hecho hace 2 años.",
+      "typeProject": "frontend",
+      "description": "Este es mi primer portfolio hecho con tecnologías vanilla, este portafolio fue hecho en el año 2021.",
 
       "technologies": [
         {

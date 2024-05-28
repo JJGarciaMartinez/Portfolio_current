@@ -45,9 +45,15 @@ const profilePic = data.avatar_url;
 </section>
 
 <style>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+  .hint--error {
+    &::after {
+      @apply bg-[rgb(145,2,2)] text-xs rounded mt-[6px];
+    }
+
+    &::before {
+      @apply bg-[rgb(145,2,2)] mt-[2px];
+    }
+  }
 
   section {
     @apply py-24 lg:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
@@ -63,14 +69,14 @@ const profilePic = data.avatar_url;
         }
 
         .profile-status-dot {
-          @apply w-3 h-3 rounded-full absolute bottom-1 right-1 cursor-help;
+          @apply w-3 h-3 rounded-full absolute bottom-[2px] right-[2px] cursor-help;
 
           &.active {
             @apply bg-[rgb(17,143,0)];
           }
 
           &.disabled {
-            @apply bg-[rgb(145,2,2)];
+            @apply bg-[rgb(205,6,2)];
           }
         }
       }
@@ -83,7 +89,7 @@ const profilePic = data.avatar_url;
         }
 
         &.disabled {
-          @apply border-[rgba(195,8,8,0.7)] bg-[rgba(145,2,2,0.2)];
+          @apply border-[rgba(205,6,2,0.7)] bg-[rgba(205,6,2,0.2)];
         }
       }
     }
@@ -94,7 +100,7 @@ const profilePic = data.avatar_url;
       }
 
       & p {
-        @apply text-sm md:text-xl mt-6;
+        @apply text-sm md:text-xl mt-6 text-pretty;
       }
     }
   }

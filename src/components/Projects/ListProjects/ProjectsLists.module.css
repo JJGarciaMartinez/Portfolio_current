@@ -1,0 +1,90 @@
+.projectsContainer {
+  .projectCardContainer {
+    @apply relative;
+
+    /* first ul */
+    .projectsList {
+      @apply grid-flow-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10;
+
+      /* first li */
+      .projectCard {
+        @apply relative flex flex-col bg-[rgba(12,31,52)] rounded-3xl border-2 border-slate-700 overflow-hidden;
+
+        .cardBody {
+          @apply flex flex-col;
+        }
+
+        .cardInfo {
+          @apply absolute py-4 px-6 md:py-4 md:px-4 lg:py-6 lg:px-4 flex-col justify-between  rounded-lg w-full h-full duration-200 z-10 hidden;
+          animation: fadeIn ease-in-out;
+          animation-duration: 250ms;
+
+          /* Repository and Visit Links */
+          .cardLinks {
+            @apply flex flex-row items-center gap-6;
+
+            & a {
+              @apply flex flex-row items-center gap-2 bg-slate-800/60 border border-slate-700 rounded-lg px-2 py-1 lg:px-3 duration-200;
+
+              &:hover {
+                @apply bg-slate-700/60 text-sky-100;
+              }
+
+              & figure {
+                @apply w-3 h-3 lg:w-5 lg:h-5 flex items-center justify-center;
+              }
+
+              & p {
+                @apply text-xs lg:text-sm;
+              }
+            }
+          }
+        }
+
+        &::before {
+          content: "";
+          @apply absolute top-0 left-0 w-full h-full bg-black/75 backdrop-blur-sm z-[1] opacity-0 duration-200;
+        }
+
+        &:hover {
+          .cardInfo {
+            @apply flex;
+          }
+
+          .cardBody {
+            & figure img {
+              @apply scale-105;
+            }
+          }
+
+          &::before {
+            @apply opacity-100;
+          }
+        }
+      }
+      .projectEmpty {
+        .cardBody {
+          & figure img {
+            @apply !scale-100;
+          }
+        }
+
+        &:hover {
+          &::before {
+            @apply opacity-0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
