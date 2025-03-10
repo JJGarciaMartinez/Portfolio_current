@@ -1,6 +1,5 @@
 ---
 import EnvelopeSimple from "@/icons/EnvelopeSimple.astro";
-
 const urlForm = import.meta.env.PUBLIC_URL_FORM;
 
 const stylesLabel =
@@ -12,7 +11,12 @@ const stylesLabel =
     <EnvelopeSimple /> Contáctame
   </h1>
   <div class="contact-form-container">
-    <form action={urlForm} method="POST" class="w-full max-w-lg md:mx-auto">
+    <form
+      id="contact-form"
+      action={urlForm}
+      method="POST"
+      class="w-full max-w-lg md:mx-auto"
+    >
       <div class="input_container group">
         <input
           type="email"
@@ -21,7 +25,7 @@ const stylesLabel =
           class="input_form peer"
           placeholder=" "
           required
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          minlength="5"
         />
         <label for="email" class={stylesLabel}>Email</label>
       </div>
@@ -34,6 +38,8 @@ const stylesLabel =
             class="input_form peer"
             placeholder=" "
             required
+            minlength="3"
+            autocomplete="off"
           />
           <label for="name" class={stylesLabel}>Nombre</label>
         </div>
@@ -45,6 +51,8 @@ const stylesLabel =
             class="input_form peer"
             placeholder=" "
             required
+            minlength="5"
+            autocomplete="off"
           />
           <label for="last_name" class={stylesLabel}>Apellido</label>
         </div>
@@ -58,6 +66,8 @@ const stylesLabel =
             class="input_form peer"
             placeholder=""
             required
+            minlength="10"
+            autocomplete="off"
           />
           <label for="phone" class={stylesLabel}>Telefono</label>
         </div>
@@ -67,8 +77,10 @@ const stylesLabel =
             name="company"
             id="company"
             class="input_form peer"
-            placeholder=" "
+            placeholder=""
             required
+            minlength="3"
+            autocomplete="off"
           />
           <label for="company" class={stylesLabel}>Empresa</label>
         </div>
@@ -86,14 +98,20 @@ const stylesLabel =
             name="message"
             class="block p-2.5 w-full text-sm rounded-lg bg-slate-700/50 border-gray-600 placeholder-gray-400 text-white h-20 max-h-40 min-h-10"
             placeholder="Escribe algo..."
-            required></textarea>
+            required
+            minlength="10"
+            autocomplete="off"></textarea>
         </div>
       </div>
-      <button
-        type="submit"
-        class="bg-slate-700/30 border border-slate-700 rounded-lg px-3 py-1 w-full md:w-fit duration-200 hover:text-sky-100 hover:bg-slate-700/60"
-        >Enviar</button
-      >
+      <span class="flex flex-col gap-2">
+        <button
+          type="submit"
+          class="bg-slate-700/30 border border-slate-700 rounded-lg px-3 py-1 w-full md:w-fit duration-200 hover:text-sky-100 hover:bg-slate-700/60"
+          >Enviar</button
+        >
+
+        <p id="result" class="text-xs text-red-500"></p>
+      </span>
     </form>
     <span class="contact-form-title">
       <h2
@@ -138,3 +156,93 @@ const stylesLabel =
     }
   }
 </style>
+
+<script>
+  import {
+    email_regex,
+    name_regex,
+    lastname_regex,
+    phone_regex,
+    company_regex,
+    message_regex,
+  } from "@utils/regex_form.ts";
+
+  const form = document.getElementById("contact-form") as HTMLFormElement;
+  const result = document.getElementById("result") as HTMLParagraphElement;
+  const errors: string[] = [];
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    errors.length = 0;
+    result.textContent = "";
+    result.style.color = "rgb(239, 68, 68)";
+
+    const email = formData.get("email") as string;
+    const name = formData.get("name") as string;
+    const last_name = formData.get("last_name") as string;
+    const phone = formData.get("phone") as string;
+    const company = formData.get("company") as string;
+    const message = formData.get("message") as string;
+
+    if (!email || !name || !last_name || !phone || !company || !message) {
+      errors.push("Por favor, rellena todos los campos");
+    }
+
+    if (!email_regex.test(email)) {
+      errors.push("Email");
+    }
+
+    if (!name_regex.test(name)) {
+      errors.push("Nombre");
+    }
+
+    if (!lastname_regex.test(last_name)) {
+      errors.push("Apellido");
+    }
+
+    if (!phone_regex.test(phone)) {
+      errors.push("Teléfono");
+    }
+
+    if (!company_regex.test(company)) {
+      errors.push("Empresa");
+    }
+
+    if (!message_regex.test(message)) {
+      errors.push("Mensaje");
+    }
+
+    if (errors.length > 0) {
+      result.textContent = `Por favor, revisa los siguientes campos: ${errors.join(
+        ", "
+      )}`;
+      return;
+    }
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        form.reset();
+        result.textContent = "Mensaje enviado correctamente";
+        result.style.color = "green";
+      } else {
+        result.textContent = data.message;
+        result.style.color = "rgb(239, 68, 68)";
+      }
+    } catch (error) {
+      result.textContent = "Error al enviar el mensaje";
+      result.style.color = "rgb(239, 68, 68)";
+    }
+  });
+</script>

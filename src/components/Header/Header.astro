@@ -12,7 +12,7 @@ const profilePic = data.avatar_url;
 ---
 
 <section id="header">
-  <div class="max-w-xl">
+  <div class="containerProfile">
     <span class="profile-header">
       <figure>
         <Image
@@ -55,8 +55,12 @@ const profilePic = data.avatar_url;
     }
   }
 
-  section {
-    @apply py-24 lg:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+  section[id="header"] {
+    @apply py-24 pb-28 lg:py-36 lg:pb-40 w-full mx-auto container lg:max-w-4xl md:max-w-2xl select-none;
+
+    .containerProfile {
+      @apply max-w-xl;
+    }
 
     .profile-header {
       @apply flex flex-row items-center gap-5 mb-4;

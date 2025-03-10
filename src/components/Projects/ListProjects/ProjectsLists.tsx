@@ -114,7 +114,7 @@ export default function ProjectsLists({ contentProjects: projects }: any) {
               <section className={styles.cardBody}>
                 <figure className="w-full rounded-lg overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/juanjportfolio/image/upload/v1716517361/ScreenShots/407shots_so_rdzife.png"
+                    src="https://res.cloudinary.com/juanjportfolio/image/upload/v1741570114/ScreenShots/369shots_so_avifhr.webp"
                     alt={`Screenshot of ${name}`}
                     width={700}
                     height={700}
