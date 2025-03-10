@@ -2,12 +2,12 @@
   "basics": {
     "name": "Juan García",
     "label": "Desarrollador Web Front End, ex estudiante de UPIICSA y egresado del bootcamp Soy Henry. He estudiado por más de 5 años programación y llevo 3 años especializandome en el Desarrollo Web Front End.",
-    "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707274229/Profile%20Pic/ProfileGrande_su2lwm.webp",
+    "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570627/Profile%20Pic/secondProfile_vfd4is.webp",
     "alternativeImage": "https://res.cloudinary.com/juanjportfolio/image/upload/v1714439801/Profile%20Pic/download20210805080713_lxuvoa.webp",
     "email": "juanjgarcia230@gmail.com",
     "github": "https://github.com/JJGarciaMartinez",
     "phone": "(+52) 56 1373 1029",
-    "avaliable": false,
+    "avaliable": true,
     "location": {
       "address": "",
       "postalCode": "56020",
@@ -30,31 +30,26 @@
         "network": "GitHub",
         "username": "JJGarciaMartinez",
         "url": "https://github.com/JJGarciaMartinez"
-      },
-      {
-        "network": "WhatsApp",
-        "username": "Whatsapp",
-        "url": "https://wa.me/525613731029"
       }
     ]
   },
   "work": [
     {
-      "name": "Desarrollo web",
+      "name": "Programación Web Front End",
       "company": "ACRI, S. C.",
       "position": "Desarrollador web Front End",
       "startDate": "2024-05-27",
       "endDate": null,
       "summary": "ACRI es una empresa de asesoría y capacitación en prevención de riesgos laborales, fundada en 2005. Ofrece servicios en seguridad industrial, higiene, ergonomía y protección ambiental, siendo también un laboratorio acreditado en evaluaciones del ambiente laboral. Trabaja con clientes de diversos sectores para reducir riesgos y promover la integridad en el trabajo.",
       "type": "Trabajo",
-      "url": "https://www.acrisc.com"
+      "url": "https://www.linkedin.com/company/acri-s-c/"
     },
     {
       "name": "Gestor de Embarcaciones",
       "company": "El Bigua",
-      "position": "FrontEnd Web Developer",
+      "position": "Desarrollador web Front End",
       "startDate": "2024-02-26",
-      "endDate": null,
+      "endDate": "2024-05-27",
       "summary": "Participo como diseñador web y desarrollador de FrontEnd en el proyecto de Gestor de Embarcaciones, para un club de embarcaciones. En colaboración con un equipo de 6 desarrolladores en total, me encargo del diseño y la interfaz de usuario de la plataforma que permite la gestión de embarcaciones.",
       "type": "Proyecto",
       "url": "https://github.com/Club-de-pesca-El-Bigua/El-Bigua-app"
@@ -62,8 +57,8 @@
     {
       "name": "Kimey Petshop",
       "company": "Soy Henry",
-      "position": "FrontEnd Web Developer",
-      "url": "https://pet-shop-kimeipetshop.vercel.app/",
+      "position": "Desarrollador web Front End",
+      "url": "https://github.com/PF-Henrry/petShop",
       "startDate": "2023-11-27",
       "endDate": "2024-01-18",
       "summary": "Participé como desarrollador de Front End en el proyecto de Kimey Petshop, una tienda dedicada a ofrecer accesorios y alimentos para distintas mascotas. En colaboración con un equipo de tres desarrolladores adicionales, me encargué del diseño y desarrollo completo de la interfaz de usuario de la plataforma.",
@@ -118,6 +113,11 @@
       "color": "49,120,198"
     },
     {
+      "name": "PHP",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709106185/Assets/php_dark_ye02ex.svg",
+      "color": "71,74,138"
+    },
+    {
       "name": "Python",
       "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/python_hvfzub.svg",
       "color": "55,118,171"
@@ -167,10 +167,22 @@
       "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347604/Assets/gitlab_kemdgl.svg",
       "color": "226,67,41"
     },
+
+    {
+      "name": "Angular",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570705/Assets/angular_ep5mrf.svg",
+      "color": "155,4,78"
+    },
+
     {
       "name": "Next.js",
       "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347298/Assets/nextjs_gcqrih.svg",
       "color": "37,37,37"
+    },
+    {
+      "name": "Astro",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347297/Assets/astro_txgkjs.svg",
+      "color": "255,93,1"
     },
     {
       "name": "React.js",
@@ -188,9 +200,9 @@
       "color": "170,93,57"
     },
     {
-      "name": "Astro",
-      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347297/Assets/astro_txgkjs.svg",
-      "color": "255,93,1"
+      "name": "React Query",
+      "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741571021/Assets/reactquery_cbyrce.svg",
+      "color": "170,4,49"
     }
   ],
   "languages": [
@@ -205,6 +217,37 @@
   ],
   "references": [],
   "projects": [
+    {
+      "name": "R&m Angular Application",
+      "isActive": false,
+      "typeProject": "frontend",
+      "description": "Este proyecto fue creado para practicar mis habilidades en Angular, consumiendo la API de Rick and Morty. Creado con Angular, y la biblioteca de componentes Core UI.",
+      "technologies": [
+        {
+          "name": "HTML5",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/html5_pm2ukg.svg",
+          "color": "227,79,38"
+        },
+        {
+          "name": "CSS3",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/css_vmdclt.svg",
+          "color": "21,114,182"
+        },
+        {
+          "name": "TypeScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/typescript_xfc5bs.svg",
+          "color": "49,120,198"
+        },
+        {
+          "name": "Angular",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570705/Assets/angular_ep5mrf.svg",
+          "color": "155,4,78"
+        }
+      ],
+      "url": "https://rick-n-morty-angular.vercel.app/",
+      "github": "https://github.com/JJGarciaMartinez/RichAndMorty_Angular",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570115/ScreenShots/805shots_so_adw3lh.webp"
+    },
     {
       "name": "R&m API Challenge",
       "isActive": false,
@@ -234,7 +277,7 @@
       ],
       "url": "https://rick-and-morty-challenge-virid.vercel.app/",
       "github": "https://github.com/JJGarciaMartinez/RickAndMorty-challenge",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1714437310/ScreenShots/523shots_so_lnfbdn.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570114/ScreenShots/230shots_so_nzm0kd.webp"
     },
     {
       "name": "Layout Challenge",
@@ -270,7 +313,7 @@
       ],
       "url": "https://layout-challenge-zeta.vercel.app/",
       "github": "https://github.com/JJGarciaMartinez/Layout-Challenge",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662455/ScreenShots/450shots_so_h2fdiq.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570114/ScreenShots/793shots_so_ntpdzh.webp"
     },
     {
       "name": "Portfolio",
@@ -312,7 +355,39 @@
       ],
       "url": "https://www.juangarcia-dev.com/",
       "github": "https://github.com/JJGarciaMartinez/Portfolio_current",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662454/ScreenShots/298shots_so_yb79eb.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570117/ScreenShots/947shots_so_dahep1.webp"
+    },
+    {
+      "name": "Primer Portfolio",
+      "isActive": false,
+      "typeProject": "frontend",
+      "description": "Este es mi primer portfolio hecho con tecnologías vanilla, este portafolio fue hecho en el año 2021.",
+
+      "technologies": [
+        {
+          "name": "HTML5",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/html5_pm2ukg.svg",
+          "color": "227,79,38"
+        },
+        {
+          "name": "CSS3",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/css_vmdclt.svg",
+          "color": "21,114,182"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
+          "color": "240,219,79"
+        },
+        {
+          "name": "PHP",
+          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709106185/Assets/php_dark_ye02ex.svg",
+          "color": "71,74,138"
+        }
+      ],
+      "url": "https://portfolio-v1-lyart-eight.vercel.app/",
+      "github": "https://github.com/JJGarciaMartinez/Portfolio_v1",
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570114/ScreenShots/771shots_so_qiuswx.webp"
     },
     {
       "name": "Kimey Petshop",
@@ -363,7 +438,7 @@
       ],
       "url": "https://pet-shop-peach.vercel.app/",
       "github": "https://github.com/PF-Henrry/petShop",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662456/ScreenShots/78shots_so_zrxwhk.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570117/ScreenShots/26shots_so_r8eily.webp"
     },
     {
       "name": "Proyecto Individual - Dogs",
@@ -414,7 +489,7 @@
       ],
       "url": "https://pi-dogs-sable.vercel.app/",
       "github": "https://github.com/JJGarciaMartinez/PI-Dogs",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662454/ScreenShots/998shots_so_rq9hax.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570114/ScreenShots/480shots_so_yesfs4.webp"
     },
     {
       "name": "Rick and Morty API",
@@ -465,7 +540,7 @@
         }
       ],
       "github": "https://github.com/JJGarciaMartinez/rickAndMorty",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1714439675/ScreenShots/50shots_so_mrxauy.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570114/ScreenShots/627shots_so_fygqnl.webp"
     },
     {
       "name": "JavaFX ATM",
@@ -496,39 +571,7 @@
         }
       ],
       "github": "https://github.com/JJGarciaMartinez/JavaFX-ATM",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662456/ScreenShots/657shots_so_cjolhj.webp"
-    },
-    {
-      "name": "Primer Portfolio",
-      "isActive": false,
-      "typeProject": "frontend",
-      "description": "Este es mi primer portfolio hecho con tecnologías vanilla, este portafolio fue hecho en el año 2021.",
-
-      "technologies": [
-        {
-          "name": "HTML5",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347296/Assets/html5_pm2ukg.svg",
-          "color": "227,79,38"
-        },
-        {
-          "name": "CSS3",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/css_vmdclt.svg",
-          "color": "21,114,182"
-        },
-        {
-          "name": "JavaScript",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1707347295/Assets/javascript_ao5e9q.svg",
-          "color": "240,219,79"
-        },
-        {
-          "name": "PHP",
-          "logo": "https://res.cloudinary.com/juanjportfolio/image/upload/v1709106185/Assets/php_dark_ye02ex.svg",
-          "color": "71,74,138"
-        }
-      ],
-      "url": "https://portfolio-v1-lyart-eight.vercel.app/",
-      "github": "https://github.com/JJGarciaMartinez/Portfolio_v1",
-      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1711662457/ScreenShots/13shots_so_v5jmtm.webp"
+      "image": "https://res.cloudinary.com/juanjportfolio/image/upload/v1741570115/ScreenShots/939shots_so_aojsvj.webp"
     }
   ]
 }

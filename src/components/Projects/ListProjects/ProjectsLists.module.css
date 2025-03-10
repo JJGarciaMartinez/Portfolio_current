@@ -8,7 +8,7 @@
 
       /* first li */
       .projectCard {
-        @apply relative flex flex-col bg-[rgba(12,31,52)] rounded-3xl border-2 border-slate-700 overflow-hidden;
+        @apply h-full relative flex flex-col bg-[rgba(12,31,52)] rounded-3xl border-2 border-slate-700 overflow-hidden;
 
         .cardBody {
           @apply flex flex-col;

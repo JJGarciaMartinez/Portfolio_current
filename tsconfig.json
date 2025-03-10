@@ -4,7 +4,8 @@
     "baseUrl": "./",
     "paths": {
       "@cv": ["./cv.json"],
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
